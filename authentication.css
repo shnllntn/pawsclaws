@@ -1,0 +1,143 @@
+/* Updated auth.css */
+.auth-wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 100px 20px;
+    background-color: #F9EED8;
+}
+
+.auth-form {
+    background-color: #Fae9c6;
+    padding: 40px;
+    width: 100%;
+    max-width: 500px;
+    border-radius: 6px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.auth-form h2 {
+    margin-bottom: 40px;
+    text-align: center;
+    font-weight: 600;
+    margin-top: 40px;
+    font-size: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    border-radius: 4px;
+    background-color: #fff;
+}
+
+.auth-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #000000;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 15px;
+}
+
+.auth-btn:hover {
+    background-color: #1a2d5a;
+}
+
+.social-login {
+    margin: 25px 0;
+    text-align: center;
+}
+
+.social-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-top: 15px;
+    justify-content: center;
+}
+
+.social-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+    border: 2px solid black;
+    background: transparent;
+    border-radius: 4px;
+    cursor: pointer;
+    max-width: 175px;
+    width: 175px;
+}
+
+.social-btn img {
+    width: 20px;
+    height: 20px;
+}
+
+.auth-switch {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* New styles for remember me and forgot password */
+.remember-forgot {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    margin: 15px 0;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.remember-me input[type="checkbox"] {
+    margin: 0;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+.name-fields {
+    display: flex;
+    gap: 20px;
+}
+
+.name-fields .form-group {
+    flex: 1;
+}
+
+.forgot-password {
+    font-size: 0.9rem;
+    color: #2a3f7a;
+    text-decoration: none;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+/* Error message styling */
+.error-message {
+    color: #dc3545;
+    font-size: 0.8rem;
+    margin-top: 5px;
+}

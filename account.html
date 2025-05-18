@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="general.css">
+    <link rel="stylesheet" href="background.css">
+    <link rel="stylesheet" href="accounts.css"> 
+    <script src="java/products.js" defer></script>
+    <script src="java/search.js" defer></script>
+    <link  href="https://unpkg.com/cropperjs@1.5.13/dist/cropper.min.css" rel="stylesheet"/>
+    <script src="https://unpkg.com/cropperjs@1.5.13/dist/cropper.min.js"></script>
+
+    <title>Your Profile - Paws&Claws Pet Store</title>
+
+</head>
+
+<body>
+    <header>
+        <div class="LogoL">
+            <a href = "index.html"><img src = "images/paws&claws.jpg" width="80" alt="Paws and Claws Logo">
+            </a>
+        </div>
+<div class = "navi">
+        <nav class = "Major">
+            <ul>
+                <li><a href="all-products.html">All Products</a></li>
+                <li class="Drop">
+                    <a href="dog-shop.html">Dogs</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="dog-shop.html?filter=all">All Products</a></li>
+                        <li><a href="dog-shop.html?filter=t-a">Toys & Accessories</a></li>
+                        <li><a href="dog-shop.html?filter=f-t">Dog Food & Treats</a></li>
+                        <li><a href="dog-shop.html?filter=v-s">Vitamins & Supplements</a></li>
+                    </ul>
+                </li>
+                <li class="Drop Drop-cat">
+                    <a href="cat-shop.html">Cats</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="cat-shop.html?filter=all">All Products</a></li>
+                        <li><a href="cat-shop.html?filter=t-a">Toys & Accessories</a></li>
+                        <li><a href="cat-shop.html?filter=f-t">Cat Food & Treats</a></li>
+                        <li><a href="cat-shop.html?filter=v-s">Vitamins & Supplements</a></li>
+                    </ul>
+                </li>
+                <li><a href="Essentials.html">Home Essentials</a></li>
+
+                <li><a href="About.html">About</a></li>
+            </ul>
+        </nav>
+
+        <nav class = "Minor">
+            <ul>
+
+<li class = "search-item">
+                <div class="search-container">
+                <!-- Magnifier button toggles the search box -->
+                <button id="search-toggle" class="search-toggle">
+                <img src="images/search.png" width="25" alt="Search">
+                </button>
+                <!-- Hidden search input and results; shown when container has class "open" -->
+                <div class="search-box">
+                <input id="search-input" type="text" placeholder="Search products…" autocomplete="off">
+                <div id="search-results" class="search-results"></div>
+                </div>
+              </div>
+              </li>
+                <li><a href="Cart.html" class = "hover"><img src = "images/cart.png" width="25"></a></li>
+                <li><a href="Wish.html" class = "hover"><img src = "images/heart-3510.png" width="25"></a></li>
+                <li id="auth-nav-item"><a href="login.html" class = "hover"><img src = "images/login.png" width="25"></a></li>
+            </ul>
+        </nav>
+
+    </div>
+
+
+
+    </header>
+
+<main class="wrapper">
+<aside class="sidebar">
+  <div class="sidebar-profile">
+    
+    <img id="sidebar-avatar" src="images/default-profile.png" alt="User avatar" width="125"/>
+
+    <div class="sidebar-userinfo">
+      <h3 id="sidebar-username">name</h3>
+      <a href="account.html" class="edit-profile">Edit Profile</a>
+    </div>
+  </div>
+
+
+
+  <button id="sidebar-logout" class="logout-btn">Log Out</button>
+
+</aside>
+
+<div class = "main-content" data-category = "Account">
+<div class = "Profile">
+    <h2>My Profile</h2>
+    <p>Manage and Protect your account</p>
+    <div class = "line"></div>
+    <div class = "Profile-content">
+
+    <div class="userInfo">
+  <form id="profile-form">
+    <h3 id="profile-username">Username: </h3>
+
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" disabled>
+    </div>
+
+  <div class="form-group">
+    <label>Email Address:</label>
+    <input type="email" id="email-input" class="hidden edit-field">
+    <span id="email-display"></span>
+    <a href="#" id="change-email">Change</a>
+
+  </div>
+
+    <div class="form-group">
+    <label>Phone Number:</label>
+    <input type="tel" id="phone-input" class="hidden edit-field">
+    <span id="phone-display"></span>
+    <a href="#" id="change-phone">Change</a>
+    
+  </div>
+
+    <div class="form-group">
+      <label>Gender:</label>
+      <label><input type="radio" name="gender" value="male" disabled> Male</label>
+      <label><input type="radio" name="gender" value="female" disabled> Female</label>
+      <label><input type="radio" name="gender" value="other" disabled> Other</label>
+    </div>
+
+    <div class="form-group">
+      <label for="dob">Date of Birth:</label>
+      <input type="date" id="dob" name="dob" disabled>
+    </div>
+
+    <button type="submit" id="save-btn" style="display:none;">Save</button>
+  </form>
+
+</div>
+
+    <div class = "vert"></div>
+<div class="prf-change">
+  <!-- current profile pic preview -->
+  <img id="profile-pic-preview"
+       src="images/default-profile.png"
+       alt="Profile Preview"
+       width="125"/>
+
+  <!-- upload form -->
+  <form id="profile-pic-form">
+    <!-- this will be hidden until edit mode -->
+    <label for="profile-pic-input" class="file-button">Select Image</label>
+    <input type="file" id="profile-pic-input" accept=".png,.jpg,.jpeg">
+    <p class="hint">
+      File size maximum: 1 MB<br>
+      File extension: .JPEG, .PNG
+    </p>
+  </form>
+</div>
+  </form>
+    </div>
+
+</div>
+    </div>
+
+
+</div>
+</div>
+
+</main>
+
+
+<!-- Footer -->
+<footer class = "footer">
+    <div class = "lineF"></div>
+<!-- Links to other pages -->
+<div class = "footerCon">
+    <div class = "footerL">
+        <div class = "LinksC">
+            <h3>Shops</h3>
+        <ul>
+             <li><a href = "dog-shop.html">Dog</a></li>
+             <li><a href = "cat-shop.html">Cat</a></li>
+             <li><a href = "Essentials.html">Home Essentials</a></li>
+             <li><a href = "all-products.html">All Products</a></li>
+        </ul>
+        </div>
+
+        <div class = "LinksC">
+            <h3>About</h3>
+        <ul>
+             <li><a href = "aboutUs.html">About Us</a></li>
+             <li><a href = "terms.html">Terms & Condition</a></li>
+             <li><a href = "privacy.html">Privacy Policy</a></li>
+             <li><a href = "faq.html">FAQs</a></li>
+             <li><a href = "contacts.html">Contact Us</a></li>
+        </ul>
+        </div>
+    </div>
+
+<!-- News Form -->
+
+    <div class = "Nletter">
+        <form class = "newsletterF">
+            <input type = "Email" placeholder = "Enter your email to get the latest news..." required>
+            <button type = "submit" class = "signup-btn">Sign Up</button>
+        </form>
+
+    </div>
+
+    
+</div>
+<div class = "lineF"></div>
+<div class = "bottomCon">
+<div class = "footerB">
+    <p>Paws&Claws © 2025. All rights reserved</p>
+</div>
+
+<div class="social-icons">
+    <a href="https://www.google.com/url?sa=i&url=https%3A%2F%2Ficons8.com%2Ficons%2Fset%2Ffacebook--white&psig=AOvVaw2n77kFBQq3RQYE16vkU3ck&ust=1747181665819000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCODtmaiVn40DFQAAAAAdAAAAABAE"><img src = "images/fbbilog.png"></a>
+    <a href="https://x.com/pawsnclaws2025?s=21&fbclid=IwY2xjawKPIqdleHRuA2FlbQIxMABicmlkETEySWNIMW1iajQ1M3hCcDBlAR6qXoZBpd6C_jvitX5eN1ALL2lUoAU39BJOcyFiImmrOTpJG-5GflheLeZVDQ_aem_DRc0ad6v7lUbWm9QCsdodw"><img src = "images/twitbilog.png"></a>
+    <a href="https://www.instagram.com/official_pawsandclaws/profilecard/?igsh=MWxzYWRndDV0NDQ1OA%3D%3D&fbclid=IwY2xjawKPIfFleHRuA2FlbQIxMABicmlkETEySWNIMW1iajQ1M3hCcDBlAR65x-ho7gtXeXJJqUfJRUL_-FPI2MAFoA741JXsMrRFoqSkyDsoYSaoAi01DA_aem__fhwmR42rKG7GB6GBdHzJQ"><img src = "images/instabilog.png"></a>
+  </div>
+
+</div>
+
+</footer>
+
+<script src="java/accounts.js"></script>
+<script src="java/filter.js"></script>
+
+<style>
+
+    .userInfo h3 {
+
+        font-weight: 100;
+        font-size: 18px;
+
+    }
+
+    .userInfo {
+        font-size: 19px;
+
+    }
+
+    .userInfo .form-group label{
+        opacity: 0.6;
+        font-size: 19px;
+    }
+    main a { 
+      color: black;
+      text-decoration: none;
+      opacity: 0.6;
+    }
+</style>
+<div id="cropper-modal" class="hidden">
+  <div class="modal-backdrop"></div>
+  <div class="modal-content">
+    <img id="crop-source" src="" alt="Crop source"/>
+    <button id="crop-confirm">Crop & Save</button>
+    <button id="crop-cancel">Cancel</button>
+  </div>
+</div>
+</body>
+
+</html>

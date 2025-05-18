@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="general.css">
+    <link rel="stylesheet" href="Products.css">
+    <link rel="stylesheet" href="hero.css">
+
+    <title>Home Page - Paws&Claws Pet Store</title>
+
+<script src="java/carousel.js" defer></script>
+<script src="java/input.js" defer></script>
+<script src="java/accounts.js" defer></script>
+<script src="java/products.js" defer></script>
+<script src="java/search.js" defer></script>
+
+</head>
+<body>
+    <header>
+        <div class="LogoL">
+            <a href = "index.html"><img src = "images/paws&claws.jpg" width="80" alt="Paws and Claws Logo">
+            </a>
+        </div>
+<div class = "navi">
+        <nav class = "Major">
+            <ul>
+                <li><a href="all-products.html">All Products</a></li>
+                <li class="Drop">
+                    <a href="dog-shop.html">Dogs</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="dog-shop.html?filter=all">All Products</a></li>
+                        <li><a href="dog-shop.html?filter=t-a">Toys & Accessories</a></li>
+                        <li><a href="dog-shop.html?filter=f-t">Dog Food & Treats</a></li>
+                        <li><a href="dog-shop.html?filter=v-s">Vitamins & Supplements</a></li>
+                    </ul>
+                </li>
+                <li class="Drop Drop-cat">
+                    <a href="cat-shop.html">Cats</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="cat-shop.html?filter=all">All Products</a></li>
+                        <li><a href="cat-shop.html?filter=t-a">Toys & Accessories</a></li>
+                        <li><a href="cat-shop.html?filter=f-t">Cat Food & Treats</a></li>
+                        <li><a href="cat-shop.html?filter=v-s">Vitamins & Supplements</a></li>
+                    </ul>
+                </li>
+                <li><a href="Essentials.html">Home Essentials</a></li>
+
+                <li><a href="About.html">About</a></li>
+            </ul>
+        </nav>
+
+        <nav class = "Minor">
+            <ul>
+              <li class = "search-item">
+                <div class="search-container">
+                <!-- Magnifier button toggles the search box -->
+                <button id="search-toggle" class="search-toggle">
+                <img src="images/search.png" width="25" alt="Search">
+                </button>
+                <!-- Hidden search input and results; shown when container has class "open" -->
+                <div class="search-box">
+                <input id="search-input" type="text" placeholder="Search products…" autocomplete="off">
+                <div id="search-results" class="search-results"></div>
+                </div>
+              </div>
+              </li>
+                <li><a href="Cart.html" class = "hover"><img src = "images/cart.png" width="25"></a></li>
+                <li><a href="Wish.html" class = "hover"><img src = "images/heart-3510.png" width="25"></a></li>
+                <li id="auth-nav-item"><a href="login.html" class = "hover"><img src = "images/login.png" width="25"></a></li>
+            </ul>
+        </nav>
+
+    </div>
+
+
+
+    </header>
+
+    <main>
+<!-- banner things -->
+<div class = "heroBG">
+<div class = "hero">
+     <div class = "heroCon" id = "hero">
+
+        <div class = "slideA">
+            <img src = "images/69a18fd3-5997-41a5-925a-c6bcf1373cb9.png" alt = "Summer Sale - Upcoming 50% Off">
+            <div class = "slideC">
+                <h2>Summer Sale</h2>
+                <p>[UPCOMING!!!] GET 50% ON ALL DOG PRODUCTS</p>
+                <a href = "#hero" class = "shop-btn">Shop soon</a>
+            </div>
+        </div>
+
+        <div class = "slide">
+            <img src = "images/cathero.png" alt = "New Cat Collection">
+            <div class = "slideC">
+                <h2>New Arrivals</h2>
+                <p>Discover our premium pet supplies collection</p>
+                <a href = "#New" class = "go-down">Explore</a>
+            </div>
+        </div>
+
+        <div class = "slide">
+            <img src = "images/carrierhero.png" alt = "Super Carrier">
+            <div class = "slideC">
+                <h2>Super Carrier</h2>
+                <p>The ultimate travel solution for your pet - Lightweight, Durable & Stylish</p>
+                <a href = "#Exclusive" class = "go-down">Shop Super Carrier</a>
+            </div>
+        </div>
+     </div>
+
+<!-- slider dots and arrows -->
+<div class = "dots">
+    
+    <span class = "dotA" data-slide="0"></span>
+    <span class = "dot" data-slide="1"></span>
+    <span class = "dot" data-slide="2"></span>
+</div>
+
+<button class = "slider-btn prev-btn">&lt;</button>
+<button class = "slider-btn next-btn">&gt;</button>
+
+
+</div>
+</div>
+
+<!-- Front Products -->
+
+
+<!-- New Products -->
+<section id="New">
+  <div class="gap">
+    <article><h2>New Arrivals</h2></article>  
+  </div>
+  <div class="carousel">
+    <button class="carousel-btn prev" aria-label="Previous" disabled>&lt;</button>
+    <div class="ProductCon">
+  <!-- Product 1 -->
+  <div class="CombineProduct" data-id="51">
+    <div class="Product">
+      <div class="Product-img-container">
+        <img src="images/Mockup/n1.png" alt="Pet Pee Pads">
+      </div>
+      <div class="Product-info">
+        <h3>Pet Pee Pads for Dogs & Puppy Training</h3>
+        <p class="price">₱400.00</p>
+        <div class="rating">★★★★☆</div>
+        <button class="addCart">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product 2 -->
+  <div class="CombineProduct" data-id="52">
+    <div class="Product">
+      <div class="Product-img-container">
+        <img src="images/Mockup/n2.png" alt="Pet N Pet 1080 Counts Green Poop Bags">
+      </div>
+      <div class="Product-info">
+        <h3>Pet N Pet 1080 Counts Green Poop Bags</h3>
+        <p class="price">₱200.00</p>
+        <div class="rating">★★★★☆</div>
+        <button class="addCart">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product 3 -->
+  <div class="CombineProduct" data-id="53">
+    <div class="Product">
+      <div class="Product-img-container">
+        <img src="images/Mockup/n3.png" alt="Kenyone 3-in-1 Pet Stroller">
+      </div>
+      <div class="Product-info">
+        <h3>Kenyone 3-in-1 Pet Stroller</h3>
+        <p class="price">₱9,000.00</p>
+        <div class="rating">★★★★☆</div>
+        <button class="addCart">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+  
+
+  <!-- Product 4 -->
+  <div class="CombineProduct" data-id="54">
+    <div class="Product">
+      <div class="Product-img-container">
+        <img src="images/Mockup/n4.png" alt="TOMKAS Dog Sling Carrier">
+      </div>
+      <div class="Product-info">
+        <h3>TOMKAS Dog Sling Carrier for Small Pets</h3>
+        <p class="price">₱9,000.00</p>
+        <div class="rating">★★★★☆</div>
+        <button class="addCart">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product 5 -->
+  <div class="CombineProduct" data-id="55">
+    <div class="Product">
+      <div class="Product-img-container">
+        <img src="images/Mockup/n5.png" alt="YUDODO Pet Front Carrier">
+      </div>
+      <div class="Product-info">
+        <h3>YUDODO Pet Front Carrier Backpacks</h3>
+        <p class="price">₱2,000.00</p>
+        <div class="rating">★★★★☆</div>
+        <button class="addCart">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product 6 -->
+  <div class="CombineProduct" data-id="56">
+    <div class="Product">
+      <div class="Product-img-container">
+        <img src="images/Mockup/n6.png" alt="PetAmi Backpack Carrier">
+      </div>
+      <div class="Product-info">
+        <h3>PetAmi Backpack Carrier for Small to Large Cat and Puppy</h3>
+        <p class="price">₱2,000.00</p>
+        <div class="rating">★★★★☆</div>
+        <button class="addCart">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+
+   
+</div>
+
+    <button class="carousel-btn next" aria-label="Next">&gt;</button>
+  </div>
+</section>
+
+<!-- Featured Products -->
+<section id="Featured">
+  <div class="gap">
+    <article><h2>Featured Products</h2></article>  
+  </div>
+  <div class="carousel">
+    <button class="carousel-btn prev" aria-label="Previous" disabled>&lt;</button>
+    <div class="ProductCon">
+      <!-- Product 57 -->
+  <div class="CombineProduct" data-id="57">
+    <div class="Product">
+      <div class="Product-img-container">
+        <img src="images/Mockup/f1.png" alt="Purepet Dry Dog Food - Smoked Chicken">
+      </div>
+      <div class="Product-info">
+        <h3>Purepet Dry Dog Food - Smoked Chicken - Buy 1 Get 1 Free</h3>
+        <p class="price">₱300.00</p>
+        <div class="rating">★★★★☆</div>
+        <button class="addCart">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product 58 -->
+  <div class="CombineProduct" data-id="58">
+    <div class="Product">
+      <div class="Product-img-container">
+        <img src="images/Mockup/f2.png" alt="PUREPET Fish Adult Cat Food">
+      </div>
+      <div class="Product-info">
+        <h3>PUREPET Fish Adult Cat Food Buy 1 - Get 1 Free</h3>
+        <p class="price">₱400.00</p>
+        <div class="rating">★★★★☆</div>
+        <button class="addCart">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product 59 -->
+  <div class="CombineProduct" data-id="59">
+    <div class="Product">
+      <div class="Product-img-container">
+        <img src="images/Mockup/f3.png" alt="Goodest Cat Tender Tuna">
+      </div>
+      <div class="Product-info">
+        <h3>Goodest Cat Tender Tuna BUY 1 GET 1</h3>
+        <p class="price">₱50.00</p>
+        <div class="rating">★★★★☆</div>
+        <button class="addCart">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product 60 -->
+  <div class="CombineProduct" data-id="60">
+    <div class="Product">
+      <div class="Product-img-container">
+        <img src="images/Mockup/f4.png" alt="Let's Bite Dry Food for Kittens">
+      </div>
+      <div class="Product-info">
+        <h3>Let's Bite Dry Food for Kittens - Ocean Fish - Buy 1 Get 1 Free</h3>
+        <p class="price">₱200.00</p>
+        <div class="rating">★★★★☆</div>
+        <button class="addCart">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product 61 -->
+  <div class="CombineProduct" data-id="61">
+    <div class="Product">
+      <div class="Product-img-container">
+        <img src="images/Mockup/f5.png" alt="Meat Up Puppy Dry Dog Food">
+      </div>
+      <div class="Product-info">
+        <h3>Meat Up Puppy Dry Dog Food Buy 1 Get 1 Free</h3>
+        <p class="price">₱500.00</p>
+        <div class="rating">★★★★☆</div>
+        <button class="addCart">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product 62 -->
+  <div class="CombineProduct" data-id="62">
+    <div class="Product">
+      <div class="Product-img-container">
+        <img src="images/Mockup/f6.png" alt="Meat Up Puppy Dry Dog Food Special">
+      </div>
+      <div class="Product-info">
+        <h3>Meat Up Puppy Dry Dog Food Special</h3>
+        <p class="price">₱169.00</p>
+        <div class="rating">★★★★☆</div>
+        <button class="addCart">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+    </div>
+    <button class="carousel-btn next" aria-label="Next">&gt;</button>
+  </div>
+</section>
+
+<!-- Exclusive Products -->
+<section id="Exclusive">
+  <div class="gap">
+    <article><h2>Exclusive Products</h2></article>  
+  </div>
+  <div class="carousel">
+    <button class="carousel-btn prev" aria-label="Previous" disabled>&lt;</button>
+    <div class="ProductCon">
+  <div class="CombineProduct" data-id="63">
+    <div class="Product">
+      <div class="Product-img-container">
+        <img src="images/Mockup/e1.png" alt="Pet Soft Disposable Male Dog Wraps">
+      </div>
+      <div class="Product-info">
+        <h3>Pet Soft Disposable Male Dog Wraps</h3>
+        <p class="price">₱500.00</p>
+        <div class="rating">★★★★☆</div>
+        <button class="addCart">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product 64 -->
+  <div class="CombineProduct" data-id="64">
+    <div class="Product">
+      <div class="Product-img-container">
+        <img src="images/Mockup/e2.png" alt="Super Carrier">
+      </div>
+      <div class="Product-info">
+        <h3>Super Carrier</h3>
+        <p class="price">₱1,500.00</p>
+        <div class="rating">★★★★☆</div>
+        <button class="addCart">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product 65 -->
+  <div class="CombineProduct" data-id="65">
+    <div class="Product">
+      <div class="Product-img-container">
+        <img src="images/Mockup/e3.png" alt="Pet Soft Diapers Female Dog Washable">
+      </div>
+      <div class="Product-info">
+        <h3>Pet Soft Diapers Female Dog Washable</h3>
+        <p class="price">₱500.00</p>
+        <div class="rating">★★★★☆</div>
+        <button class="addCart">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product 66 -->
+  <div class="CombineProduct" data-id="66">
+    <div class="Product">
+      <div class="Product-img-container">
+        <img src="images/Mockup/e4.png" alt="Paw Legend Diapers for Female Cats Washable">
+      </div>
+      <div class="Product-info">
+        <h3>Paw Legend Diapers for Female Cats Washable</h3>
+        <p class="price">₱700.00</p>
+        <div class="rating">★★★★☆</div>
+        <button class="addCart">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product 67 -->
+  <div class="CombineProduct" data-id="67">
+    <div class="Product">
+      <div class="Product-img-container">
+        <img src="images/Mockup/e5.png" alt="Pet Parents Washable Belly Bands for Male Dogs">
+      </div>
+      <div class="Product-info">
+        <h3>Pet Parents Washable Belly Bands for Male Dogs</h3>
+        <p class="price">₱900.00</p>
+        <div class="rating">★★★★☆</div>
+        <button class="addCart">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product 68 -->
+  <div class="CombineProduct" data-id="68">
+    <div class="Product">
+      <div class="Product-img-container">
+        <img src="images/Mockup/e6.png" alt="FunnyDogClothes Suspenders for Pets">
+      </div>
+      <div class="Product-info">
+        <h3>FunnyDogClothes Suspenders for Pet Apparel</h3>
+        <p class="price">₱700.00</p>
+        <div class="rating">★★★★☆</div>
+        <button class="addCart">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+
+    </div>
+    <button class="carousel-btn next" aria-label="Next">&gt;</button>
+  </div>
+</section>
+
+       
+<!-- Main Categories -->
+<section id = "Categories-Shop">
+    <article><h2>Categories</h2></article>  
+<div class = "Main-Shops">
+    <div class = "ShopCon">
+
+<a href = "dog-shop.html" class = "ShopL"><img src = "images/doglogo.png" width="225"><h3>Dog Shop →</h3></a>
+<a href = "cat-shop.html" class = "ShopL"><img src = "images/catlogo.png" width="225"><h3>Cat Shop →</h3></a>
+<a href = "Essentials.html" class = "ShopL"><img src = "images/homeElogo.png" width="225"><h3>Home Essentials →</h3></a>
+
+
+</div>
+    </div>
+</div>
+</section>
+
+    </main>
+
+<!-- Footer -->
+<footer class = "footer">
+    <div class = "lineF"></div>
+<!-- Links to other pages -->
+<div class = "footerCon">
+    <div class = "footerL">
+        <div class = "LinksC">
+            <h3>Shops</h3>
+        <ul>
+             <li><a href = "dog-shop.html">Dog</a></li>
+             <li><a href = "cat-shop.html">Cat</a></li>
+             <li><a href = "Essentials.html">Home Essentials</a></li>
+             <li><a href = "all-products.html">All Products</a></li>
+        </ul>
+        </div>
+
+        <div class = "LinksC">
+            <h3>About</h3>
+        <ul>
+             <li><a href = "aboutUs.html">About Us</a></li>
+             <li><a href = "terms.html">Terms & Condition</a></li>
+             <li><a href = "privacy.html">Privacy Policy</a></li>
+             <li><a href = "faq.html">FAQs</a></li>
+             <li><a href = "contacts.html">Contact Us</a></li>
+        </ul>
+        </div>
+    </div>
+
+<!-- News Form -->
+
+    <div class = "Nletter">
+        <form class = "newsletterF">
+            <input type = "Email" placeholder = "Enter your email to get the latest news..." required>
+            <button type = "submit" class = "signup-btn">Sign Up</button>
+        </form>
+
+    </div>
+
+    
+</div>
+<div class = "lineF"></div>
+<div class = "bottomCon">
+<div class = "footerB">
+    <p>Paws&Claws © 2025. All rights reserved</p>
+</div>
+
+<div class="social-icons">
+    <a href="https://www.google.com/url?sa=i&url=https%3A%2F%2Ficons8.com%2Ficons%2Fset%2Ffacebook--white&psig=AOvVaw2n77kFBQq3RQYE16vkU3ck&ust=1747181665819000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCODtmaiVn40DFQAAAAAdAAAAABAE"><img src = "images/fbbilog.png"></a>
+    <a href="https://x.com/pawsnclaws2025?s=21&fbclid=IwY2xjawKPIqdleHRuA2FlbQIxMABicmlkETEySWNIMW1iajQ1M3hCcDBlAR6qXoZBpd6C_jvitX5eN1ALL2lUoAU39BJOcyFiImmrOTpJG-5GflheLeZVDQ_aem_DRc0ad6v7lUbWm9QCsdodw"><img src = "images/twitbilog.png"></a>
+    <a href="https://www.instagram.com/official_pawsandclaws/profilecard/?igsh=MWxzYWRndDV0NDQ1OA%3D%3D&fbclid=IwY2xjawKPIfFleHRuA2FlbQIxMABicmlkETEySWNIMW1iajQ1M3hCcDBlAR65x-ho7gtXeXJJqUfJRUL_-FPI2MAFoA741JXsMrRFoqSkyDsoYSaoAi01DA_aem__fhwmR42rKG7GB6GBdHzJQ"><img src = "images/instabilog.png"></a>
+  </div>
+
+</div>
+
+</footer>
+<script>
+  document.querySelectorAll('.CombineProduct .addCart')
+    .forEach(btn => {
+      btn.addEventListener('click', () => {
+        // find the product container
+        const container = btn.closest('.CombineProduct');
+        const id = container.dataset.id;
+        // redirect to your template, passing the id
+        window.location.href = `Products.html?id=${id}`;
+      });
+    });
+</script>
+<script>
+document.querySelectorAll('.CombineProduct').forEach(card => {
+  card.addEventListener('click', (e) => {
+    // Prevent if the actual clicked element is the button (or inside it)
+    if (e.target.closest('.addCart')) return;
+    
+    const id = card.dataset.id;
+    window.location.href = `Products.html?id=${id}`;
+  });
+});
+</script>
+</body>
+
+<style>
+
+button a {
+
+    text-decoration: none;
+    color: white;
+}
+
+#Categories-Shop {
+
+    margin-top: 10px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    background-color: #F9EED8;
+
+}
+
+#Categories-Shop h2 {
+    margin-left: 40px;
+}
+
+.Main-Shops {
+
+display: flex;
+flex-direction: row;
+justify-content: center;
+
+
+}
+
+.ShopCon {
+
+    display: flex;
+    gap: 75px;
+    flex-wrap: wrap;
+    max-width: 900px;
+    margin: 0;
+
+}
+
+.ShopCon a {
+
+    text-decoration: none;
+    color: black;
+    text-align: center;
+}
+
+.ShopL img {
+
+    margin-top: 20px;
+    border-radius: 35%;
+    margin-bottom: 0;
+    border-bottom: 2px solid #2a3f7a;
+
+}
+
+.ShopL img:hover {
+   transform: scale(1.1);
+}
+
+
+
+    .ProductCon {
+  display: flex;
+  gap: 10px;
+  padding: 20px;
+  overflow-x: hidden;
+     scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+     flex-wrap: nowrap;
+     width: 100%;
+   
+
+}
+
+.Product {
+ flex: 0 0 335px;
+    max-width: 335px;
+    min-width: 250px;
+    max-height: 400px;
+    min-height: 350px;
+    padding: 20px;
+    font-size: 16px;
+    margin: 2px;
+    
+    text-align: center;
+    position: relative;
+   
+}
+
+.Product img {
+  max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* Prevents stretching */
+    padding: 0;
+}
+
+.addCart {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    cursor: pointer;
+    margin-top: 15px; /* Reduced from 60px */
+    width: calc(100% - 10px); /* Full width with padding */
+}
+.Product-img-container {
+    height: 150px; /* Fixed height for images */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #2a3f7a;
+}
+
+#New, #Featured, #Exclusive {
+    height: auto;
+    width: 100%;
+    background-color: #F9EED8;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+#Featured {
+
+    margin-top: 10px;
+}
+
+.DogShop img, .CatShop img, .EssenShop img {
+
+  border-bottom: 2px solid #2a3f7a;
+  border-radius: 35%;
+}
+
+.gap {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+}
+
+.V a{
+
+    text-decoration: none;
+    color: #465fa2;
+    font-weight: bold;
+}
+
+
+
+
+.carousel, .ProductCon { 
+    width: 100%; 
+}
+
+.Product figure {
+    margin: 0;
+}
+
+.CombineProduct:hover {
+
+  transform: scale(1.1);
+  transition: 0.2s ease-in;
+}
+
+
+.CombineProduct {
+
+    display: flex;
+    flex-direction: column;
+
+
+    margin: 0;
+    padding: 0;
+
+}
+
+.CombineProduct .Product  {
+    margin-top: 0;
+}
+
+.CombineProduct img {
+    padding: 0;
+}
+
+
+
+.carousel {
+    position: relative;
+    margin: 0 auto;
+    overflow: visible;
+  }
+  
+  /* Prev/Next buttons */
+  .carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background:none;
+    color: black;
+    border: 2px solid black;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+  }
+  .carousel-btn[disabled] {
+    opacity: 0.3;
+    cursor: default;
+  }
+  .carousel-btn.prev { left: 10px; }
+  .carousel-btn.next { right: 10px; }
+
+  .Product-Aisle {
+    display: flex;
+    flex-wrap: wrap; /* Changed from nowrap */
+    gap: 20px;
+    padding: 20px;
+    flex: 1; /* Take remaining space */
+    overflow: visible; /* Remove any overflow hiding */
+}
+
+.checkbox-filters {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+
+  }
+  
+  .checkbox-filters li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .checkbox-filters label {
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    color: #465FA2;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+  }
+
+  .preference {
+    margin-left: 40px;
+    width: 250px; /* Fixed width for filters */
+    flex-shrink: 0; /* Prevent shrinking */
+}
+  
+  .checkbox-filters input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    accent-color: #465FA2;
+  }
+  
+  .checkbox-filters label:hover {
+    background-color: #f0f4ff;
+  }
+  
+  .checkbox-filters input:checked + label {
+    background-color: #465FA2;
+    color: white;
+  }
+
+  .layout {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    padding: 20px;
+}
+
+
+</style>
+</html>

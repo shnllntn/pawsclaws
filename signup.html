@@ -1,0 +1,179 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="general.css">
+    <link rel="stylesheet" href="authentication.css">
+    <link rel="stylesheet" href="background.css">
+    <script src="java/products.js" defer></script>    
+    <script src="java/search.js" defer></script>
+    <title>Signup - Paws&Claws</title>
+</head>
+<script src="java/accounts.js"></script>
+<body>
+    <header>
+        <div class="LogoL">
+            <a href = "index.html"><img src = "images/paws&claws.jpg" width="80" alt="Paws and Claws Logo">
+            </a>
+        </div>
+<div class = "navi">
+        <nav class = "Major">
+            <ul>
+                <li><a href="all-products.html">All Products</a></li>
+                <li class="Drop">
+                    <a href="dog-shop.html">Dogs</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="dog-shop.html?filter=all">All Products</a></li>
+                        <li><a href="dog-shop.html?filter=t-a">Toys & Accessories</a></li>
+                        <li><a href="dog-shop.html?filter=f-t">Dog Food & Treats</a></li>
+                        <li><a href="dog-shop.html?filter=v-s">Vitamins & Supplements</a></li>
+                    </ul>
+                </li>
+                <li class="Drop Drop-cat">
+                    <a href="cat-shop.html">Cats</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="cat-shop.html?filter=all">All Products</a></li>
+                        <li><a href="cat-shop.html?filter=t-a">Toys & Accessories</a></li>
+                        <li><a href="cat-shop.html?filter=f-t">Cat Food & Treats</a></li>
+                        <li><a href="cat-shop.html?filter=v-s">Vitamins & Supplements</a></li>
+                    </ul>
+                </li>
+                <li><a href="Essentials.html">Home Essentials</a></li>
+
+                <li><a href="About.html">About</a></li>
+            </ul>
+        </nav>
+
+        <nav class = "Minor">
+            <ul>
+
+<li class = "search-item">
+                <div class="search-container">
+                <!-- Magnifier button toggles the search box -->
+                <button id="search-toggle" class="search-toggle">
+                <img src="images/search.png" width="25" alt="Search">
+                </button>
+                <!-- Hidden search input and results; shown when container has class "open" -->
+                <div class="search-box">
+                <input id="search-input" type="text" placeholder="Search products…" autocomplete="off">
+                <div id="search-results" class="search-results"></div>
+                </div>
+              </div>
+              </li>
+                <li><a href="Cart.html" class = "hover"><img src = "images/cart.png" width="25"></a></li>
+                <li><a href="Wish.html" class = "hover"><img src = "images/heart-3510.png" width="25"></a></li>
+                <li id="auth-nav-item"><a href="login.html" class = "hover"><img src = "images/login.png" width="25"></a></li>
+            </ul>
+        </nav>
+
+    </div>
+
+
+
+    </header>
+
+  <main class="auth-wrapper">
+        <section class="auth-form">
+            <h2>Sign Up</h2>
+            <form id="signupForm">
+                <div class="name-fields">
+                    <div class="form-group">
+                        <label for="signup-fname">First Name</label>
+                        <input type="text" id="signup-fname" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="signup-lname">Last Name</label>
+                        <input type="text" id="signup-lname" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="signup-email">Email Address</label>
+                    <input type="email" id="signup-email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="signup-password">Password</label>
+                    <input type="password" id="signup-password" minlength="8" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="signup-confirm">Confirm Password</label>
+                    <input type="password" id="signup-confirm" required>
+                </div>
+
+                <button type="submit" class="auth-btn">Create Account</button>
+            </form>
+
+            <div class="auth-switch">
+                Already have an account? <a href="login.html">Log In</a>
+            </div>
+        </section>
+    </main>
+
+<!-- Footer -->
+<footer class = "footer">
+    <div class = "lineF"></div>
+<!-- Links to other pages -->
+<div class = "footerCon">
+    <div class = "footerL">
+        <div class = "LinksC">
+            <h3>Shops</h3>
+        <ul>
+             <li><a href = "dog-shop.html">Dog</a></li>
+             <li><a href = "cat-shop.html">Cat</a></li>
+             <li><a href = "Essentials.html">Home Essentials</a></li>
+             <li><a href = "all-products.html">All Products</a></li>
+        </ul>
+        </div>
+
+        <div class = "LinksC">
+            <h3>About</h3>
+        <ul>
+             <li><a href = "aboutUs.html">About Us</a></li>
+             <li><a href = "terms.html">Terms & Condition</a></li>
+             <li><a href = "privacy.html">Privacy Policy</a></li>
+             <li><a href = "faq.html">FAQs</a></li>
+             <li><a href = "contacts.html">Contact Us</a></li>
+        </ul>
+        </div>
+    </div>
+
+<!-- News Form -->
+
+    <div class = "Nletter">
+        <form class = "newsletterF">
+            <input type = "Email" placeholder = "Enter your email to get the latest news..." required>
+            <button type = "submit" class = "signup-btn">Sign Up</button>
+        </form>
+
+    </div>
+
+    
+</div>
+<div class = "lineF"></div>
+<div class = "bottomCon">
+<div class = "footerB">
+    <p>Paws&Claws © 2025. All rights reserved</p>
+</div>
+
+<div class="social-icons">
+    <a href="https://www.google.com/url?sa=i&url=https%3A%2F%2Ficons8.com%2Ficons%2Fset%2Ffacebook--white&psig=AOvVaw2n77kFBQq3RQYE16vkU3ck&ust=1747181665819000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCODtmaiVn40DFQAAAAAdAAAAABAE"><img src = "images/fbbilog.png"></a>
+    <a href="https://x.com/pawsnclaws2025?s=21&fbclid=IwY2xjawKPIqdleHRuA2FlbQIxMABicmlkETEySWNIMW1iajQ1M3hCcDBlAR6qXoZBpd6C_jvitX5eN1ALL2lUoAU39BJOcyFiImmrOTpJG-5GflheLeZVDQ_aem_DRc0ad6v7lUbWm9QCsdodw"><img src = "images/twitbilog.png"></a>
+    <a href="https://www.instagram.com/official_pawsandclaws/profilecard/?igsh=MWxzYWRndDV0NDQ1OA%3D%3D&fbclid=IwY2xjawKPIfFleHRuA2FlbQIxMABicmlkETEySWNIMW1iajQ1M3hCcDBlAR65x-ho7gtXeXJJqUfJRUL_-FPI2MAFoA741JXsMrRFoqSkyDsoYSaoAi01DA_aem__fhwmR42rKG7GB6GBdHzJQ"><img src = "images/instabilog.png"></a>
+  </div>
+
+</div>
+
+</footer>
+</body>
+
+<style>
+
+
+</style>
+
+</html>
+

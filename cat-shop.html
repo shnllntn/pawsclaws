@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="general.css">
+    <link rel="stylesheet" href="Products.css">
+    <link rel="stylesheet" href="background.css">
+<script src="java/input.js" defer></script>
+<script src="java/filter.js"defer></script>
+<script src="java/accounts.js" defer></script>
+<script src="java/products.js" defer></script>
+<script src="java/search.js" defer></script>
+    <title>Cat Shop - Paws&Claws Pet Store</title>
+</head>
+
+
+<body>
+    <header>
+        <div class="LogoL">
+            <a href = "index.html"><img src = "images/paws&claws.jpg" width="80" alt="Paws and Claws Logo">
+            </a>
+        </div>
+<div class = "navi">
+        <nav class = "Major">
+            <ul>
+                <li><a href="all-products.html">All Products</a></li>
+                <li class="Drop">
+                    <a href="dog-shop.html">Dogs</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="dog-shop.html?filter=all">All Products</a></li>
+                        <li><a href="dog-shop.html?filter=t-a">Toys & Accessories</a></li>
+                        <li><a href="dog-shop.html?filter=f-t">Dog Food & Treats</a></li>
+                        <li><a href="dog-shop.html?filter=v-s">Vitamins & Supplements</a></li>
+                    </ul>
+                </li>
+                <li class="Drop Drop-cat">
+                    <a href="cat-shop.html">Cats</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="cat-shop.html?filter=all">All Products</a></li>
+                        <li><a href="cat-shop.html?filter=t-a">Toys & Accessories</a></li>
+                        <li><a href="cat-shop.html?filter=f-t">Cat Food & Treats</a></li>
+                        <li><a href="cat-shop.html?filter=v-s">Vitamins & Supplements</a></li>
+                    </ul>
+                </li>
+                <li><a href="Essentials.html">Home Essentials</a></li>
+
+                <li><a href="About.html">About</a></li>
+            </ul>
+        </nav>
+
+        <nav class = "Minor">
+            <ul>
+
+<li class = "search-item">
+                <div class="search-container">
+                <!-- Magnifier button toggles the search box -->
+                <button id="search-toggle" class="search-toggle">
+                <img src="images/search.png" width="25" alt="Search">
+                </button>
+                <!-- Hidden search input and results; shown when container has class "open" -->
+                <div class="search-box">
+                <input id="search-input" type="text" placeholder="Search products…" autocomplete="off">
+                <div id="search-results" class="search-results"></div>
+                </div>
+              </div>
+              </li>
+                <li><a href="Cart.html" class = "hover"><img src = "images/cart.png" width="25"></a></li>
+                <li><a href="Wish.html" class = "hover"><img src = "images/heart-3510.png" width="25"></a></li>
+                <li id="auth-nav-item"><a href="login.html" class = "hover"><img src = "images/login.png" width="25"></a></li>
+            </ul>
+        </nav>
+
+    </div>
+
+
+
+    </header>
+    <main>
+        <main>
+            <div class = "CatShop">
+                  <img src = "images/catlogo.png" width = "150px" alt = "Cat shop">
+                  <h1>Cat Shop</h1>
+            </div>
+
+
+<div class = "layout">
+
+    <div class = "preference">
+        <h3>Filters</h3>
+        <div class="filters">
+            <h4>Categories</h4>
+            <ul class="checkbox-filters">
+                <li>
+                  <label>
+                    <input type="checkbox" value="all" checked> All Products
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input type="checkbox" value="t-a"> Toys & Accessories
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input type="checkbox" value="f-t"> Cat Food & Treats
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input type="checkbox" value="v-s"> Vitamins & Supplements
+                  </label>
+                </li>
+              </ul>
+          </div>
+    
+    
+    </div>
+    
+    <div class = Product-Aisle>
+    
+<div class="CombineProduct" data-category="f-t" data-id="69">
+  <div class="ProductC" data-category="f-t">
+    <div class="Product-img-container">
+      <img src="images/Mockup/c1.png" alt="WHISKAS Cat Food Wet Pouch (28-Pack), 80g" width="210" height="150">
+    </div>
+    <div class="Product-info">
+      <h3>WHISKAS Cat Food Wet Pouch (28-Pack), 80g</h3>
+      <p class="price">₱78.00</p>
+      <div class="rating">★★★★☆</div>
+      <button class="addCart">Add to Cart</button>
+    </div>
+  </div>
+</div>
+
+<div class="CombineProduct" data-category="f-t" data-id="70">
+  <div class="ProductC" data-category="f-t">
+    <div class="Product-img-container">
+      <img src="images/Mockup/c2.png" alt="Goodest Cat Multi-Variant Wet Cat Food Pouch (85g)" width="210" height="150">
+    </div>
+    <div class="Product-info">
+      <h3>Goodest Cat Multi-Variant Wet Cat Food Pouch (85g)</h3>
+      <p class="price">₱136.00</p>
+      <div class="rating">★★★★☆</div>
+      <button class="addCart">Add to Cart</button>
+    </div>
+  </div>
+</div>
+
+<div class="CombineProduct" data-category="f-t" data-id="71">
+  <div class="ProductC" data-category="f-t">
+    <div class="Product-img-container">
+      <img src="images/Mockup/c3.png" alt="AOZI CAT - BEEF TASTE / TUNA FLAVOR / CHICKEN FLAVORED (Wet Pouch)"  width="210" height="150">
+    </div>
+    <div class="Product-info">
+      <h3>AOZI CAT - BEEF TASTE / TUNA FLAVOR / CHICKEN FLAVORED</h3>
+      <p class="price">₱320.00</p>
+      <div class="rating">★★★★☆</div>
+      <button class="addCart">Add to Cart</button>
+    </div>
+  </div>
+</div>
+
+<div class="CombineProduct" data-category="f-t" data-id="72">
+  <div class="ProductC" data-category="f-t">
+    <div class="Product-img-container">
+      <img src="images/Mockup/c4.png" alt="SHEBA Wet Cat Food (6-Pack) 70g"  width="210" height="150">
+    </div>
+    <div class="Product-info">
+      <h3>SHEBA Wet Cat Food (6-Pack) 70g</h3>
+      <p class="price">₱240.00</p>
+      <div class="rating">★★★★☆</div>
+      <button class="addCart">Add to Cart</button>
+    </div>
+  </div>
+</div>
+
+<div class="CombineProduct" data-category="f-t" data-id="73">
+  <div class="ProductC" data-category="f-t">
+    <div class="Product-img-container">
+      <img src="images/Mockup/c5.png" alt="Petsup (12PCS) Real Meat Delish Cat Wet Food Bundle"  width="210" height="150">
+    </div>
+    <div class="Product-info">
+      <h3>Petsup (12PCS) Real Meat Delish Cat Wet Food Bundle</h3>
+      <p class="price">₱384.00</p>
+      <div class="rating">★★★★☆</div>
+      <button class="addCart">Add to Cart</button>
+    </div>
+  </div>
+</div>
+
+<div class="CombineProduct" data-category="f-t" data-id="74">
+  <div class="ProductC" data-category="f-t">
+    <div class="Product-img-container">
+      <img src="images/Mockup/c6.png" alt="WHISKAS Cat Dry Food in Ocean Fish Flavor (7kg)"  width="210" height="150">
+    </div>
+    <div class="Product-info">
+      <h3>WHISKAS Cat Dry Food in Ocean Fish Flavor (7kg)</h3>
+      <p class="price">₱920.00</p>
+      <div class="rating">★★★★☆</div>
+      <button class="addCart">Add to Cart</button>
+    </div>
+  </div>
+</div>
+
+
+<div class="CombineProduct" data-category="f-t" data-id="75">
+  <div class="ProductC" data-category="f-t">
+    <div class="Product-img-container">
+      <img src="images/Mockup/c7.png" alt="Aozi Natural Cat Kitten Dry Food (1kg)"  width="210" height="150">
+    </div>
+    <div class="Product-info">
+      <h3>Aozi Natural Cat Kitten Dry Food (1kg)</h3>
+      <p class="price">₱380.00</p>
+      <div class="rating">★★★★☆</div>
+      <button class="addCart">Add to Cart</button>
+    </div>
+  </div>
+</div>
+
+<div class="CombineProduct" data-category="f-t" data-id="76">
+  <div class="ProductC" data-category="f-t">
+    <div class="Product-img-container">
+      <img src="images/Mockup/c8.png" alt="1kg Nutricare All Stages Organic Cat Dry food"  width="210" height="150">
+    </div>
+    <div class="Product-info">
+      <h3>1kg Nutricare All Stages Organic Cat Dry food</h3>
+      <p class="price">₱120.00</p>
+      <div class="rating">★★★★☆</div>
+      <button class="addCart">Add to Cart</button>
+    </div>
+  </div>
+</div>
+
+<div class="CombineProduct" data-category="f-t" data-id="77">
+  <div class="ProductC" data-category="f-t">
+    <div class="Product-img-container">
+      <img src="images/Mockup/c9.png" alt="Petlicious Cat Dry Food Tuna Flavor (1kg)" width="210" height="150">
+    </div>
+    <div class="Product-info">
+      <h3>Petlicious Cat Dry Food Tuna Flavor (1kg)</h3>
+      <p class="price">₱120.00</p>
+      <div class="rating">★★★★☆</div>
+      <button class="addCart">Add to Cart</button>
+    </div>
+  </div>
+</div>
+
+<div class="CombineProduct" data-category="f-t" data-id="78">
+  <div class="ProductC" data-category="f-t">
+    <div class="Product-img-container">
+      <img src="images/Mockup/c10.png" alt="PetMarra Raw Coated Recipe Adult Cat and Kitten Dry Food 1kg"  width="210" height="150">
+    </div>
+    <div class="Product-info">
+      <h3>Petlicious Cat Dry Food (1kg) - Freeze-Dried Raw Coating</h3>
+      <p class="price">₱180.00</p>
+      <div class="rating">★★★★☆</div>
+      <button class="addCart">Add to Cart</button>
+    </div>
+  </div>
+</div>
+
+<div class="CombineProduct" data-category="f-t" data-id="79">
+  <div class="ProductC" data-category="f-t">
+    <div class="Product-img-container">
+      <img src="images/Mockup/c11.png" alt="TEMPTATIONS Cat Treat"  width="210" height="150">
+    </div>
+    <div class="Product-info">
+      <h3>TEMPTATIONS Cat Treat</h3>
+      <p class="price">₱584.00</p>
+      <div class="rating">★★★★☆</div>
+      <button class="addCart">Add to Cart</button>
+    </div>
+  </div>
+</div>
+
+<div class="CombineProduct" data-category="f-t" data-id="80">
+  <div class="ProductC" data-category="f-t">
+    <div class="Product-img-container">
+  <img src="images/Mockup/c12.png" alt="CASSIEL PET (6Pcs) Cat Treats"  width="210" height="150">
+    </div>
+    <div class="Product-info">
+      <h3>CASSIEL PET (6Pcs) Cat Treats</h3>
+      <p class="price">₱254.00</p>
+      <div class="rating">★★★★☆</div>
+      <button class="addCart">Add to Cart</button>
+    </div>
+  </div>
+</div>
+
+<div class="CombineProduct" data-category="f-t" data-id="81">
+  <div class="ProductC" data-category="f-t">
+    <div class="Product-img-container">
+  <img src="images/Mockup/c13.png" alt="CASSIEL PET (6Pcs) Cat Treats (Strip Treats)"  width="210" height="150">
+    </div>
+    <div class="Product-info">
+      <h3>CASSIEL PET (6Pcs) Cat Treats (Strip Treats)</h3>
+      <p class="price">₱54.00</p>
+      <div class="rating">★★★★☆</div>
+      <button class="addCart">Add to Cart</button>
+    </div>
+  </div>
+</div>
+
+<div class="CombineProduct" data-category="f-t" data-id="82">
+  <div class="ProductC" data-category="f-t">
+    <div class="Product-img-container">
+  <img src="images/Mockup/c14.png" alt="Ciao Churu Tuna Maguro Cat Treats"  width="210" height="150">
+    </div>
+    <div class="Product-info">
+      <h3>Ciao Churu Tuna Maguro Cat Treats</h3>
+      <p class="price">₱50.00</p>
+      <div class="rating">★★★★☆</div>
+      <button class="addCart">Add to Cart</button>
+    </div>
+  </div>
+</div>
+
+<div class="CombineProduct" data-category="f-t" data-id="83">
+  <div class="ProductC" data-category="f-t">
+    <div class="Product-img-container">
+  <img src="images/Mockup/c15.png" alt="SmartHeart Creamy Salmon Cat Treats (60g)"  width="210" height="150">
+    </div>
+    <div class="Product-info">
+      <h3>SmartHeart Creamy Salmon Cat Treats (60g)</h3>
+      <p class="price">₱110.00</p>
+      <div class="rating">★★★★☆</div>
+      <button class="addCart">Add to Cart</button>
+    </div>
+  </div>
+</div>
+
+<div class="CombineProduct" data-category="f-t" data-id="84">
+  <div class="ProductC" data-category="f-t">
+    <div class="Product-img-container">
+  <img src="images/Mockup/c16.png" alt="Ciao Churu Seafood Festive Jar Cat Treats"  width="210" height="150">
+    </div>
+    <div class="Product-info">
+      <h3>Ciao Churu Seafood Festive Jar Cat Treats</h3>
+      <p class="price">₱1000.00</p>
+      <div class="rating">★★★★☆</div>
+      <button class="addCart">Add to Cart</button>
+    </div>
+  </div>
+</div>
+
+<div class="CombineProduct" data-category="f-t" data-id="85">
+  <div class="ProductC" data-category="f-t">
+    <div class="Product-img-container">
+  <img src="images/Mockup/c17.png" alt="Carnilove Soft Snack Chicken with Thyme Cat Treats"  width="210" height="150">
+    </div>
+    <div class="Product-info">
+      <h3>Carnilove Soft Snack Chicken with Thyme Cat Treats</h3>
+      <p class="price">₱100.00</p>
+      <div class="rating">★★★★☆</div>
+      <button class="addCart">Add to Cart</button>
+    </div>
+  </div>
+</div>
+
+<div class="CombineProduct" data-category="f-t" data-id="86">
+  <div class="ProductC" data-category="f-t">
+    <div class="Product-img-container">
+  <img src="images/Mockup/c18.png" alt="Inaba Juicy Bites Tuna and Chicken Single Cat Treats" width="210" height="150">
+    </div>
+    <div class="Product-info">
+      <h3>Inaba Juicy Bites Tuna and Chicken Single Cat Treats</h3>
+      <p class="price">₱50.00</p>
+      <div class="rating">★★★★☆</div>
+      <button class="addCart">Add to Cart</button>
+    </div>
+  </div>
+</div>
+
+<div class="CombineProduct" data-category="f-t" data-id="87">
+  <div class="ProductC" data-category="f-t">
+    <div class="Product-img-container">
+  <img src="images/Mockup/c19.png" alt="FRISKIES Party Mix Crunch Beachside Adult Cat Treats"  width="210" height="150">
+    </div>
+    <div class="Product-info">
+      <h3>FRISKIES Party Mix Crunch Beachside Adult Cat Treats</h3>
+      <p class="price">₱50.00</p>
+      <div class="rating">★★★★☆</div>
+      <button class="addCart">Add to Cart</button>
+    </div>
+  </div>
+</div>
+
+<div class="CombineProduct" data-category="f-t" data-id="88">
+  <div class="ProductC" data-category="f-t">
+    <div class="Product-img-container">
+  <img src="images/Mockup/c20.png" alt="Brit Care Dental Cat Treats (50g)"  width="210" height="150">
+    </div>
+    <div class="Product-info">
+      <h3>Brit Care Dental Cat Treats (50g)</h3>
+      <p class="price">₱120.00</p>
+      <div class="rating">★★★★☆</div>
+      <button class="addCart">Add to Cart</button>
+    </div>
+  </div>
+</div>
+
+<div class="CombineProduct" data-category="t-a" data-id="89">
+  <div class="ProductC" data-category="t-a">
+    <div class="Product-img-container">
+  <img src="images/Mockup/c21.png" alt="Zee.Cat Atlanta H-Harness and Leash Set"  width="210" height="150">
+    </div>
+    <div class="Product-info">
+      <h3>Zee.Cat Atlanta H-Harness and Leash Set</h3>
+      <p class="price">₱584.00</p>
+      <div class="rating">★★★★☆</div>
+      <button class="addCart">Add to Cart</button>
+    </div>
+  </div>
+</div>
+
+<div class="CombineProduct" data-category="t-a" data-id="90">
+  <div class="ProductC" data-category="t-a">
+    <div class="Product-img-container">
+  <img src="images/Mockup/c22.png" alt="Petsup Cat Strip Spoon Squeeze N Lick Feeder"  width="210" height="150">
+    </div>
+    <div class="Product-info">
+      <h3>Petsup Cat Strip Spoon Squeeze N Lick Feeder</h3>
+      <p class="price">₱70.00</p>
+      <div class="rating">★★★★☆</div>
+      <button class="addCart">Add to Cart</button>
+    </div>
+  </div>
+</div>
+
+<div class="CombineProduct" data-category="t-a" data-id="91">
+  <div class="ProductC" data-category="t-a">
+    <div class="Product-img-container">
+  <img src="images/Mockup/c23.png" alt="Cute Pet Headgear Knitting"  width="210" height="150">
+    </div>
+    <div class="Product-info">
+      <h3>Cute Pet Headgear Knitting</h3>
+      <p class="price">₱100.00</p>
+      <div class="rating">★★★★☆</div>
+      <button class="addCart">Add to Cart</button>
+    </div>
+  </div>
+</div>
+
+<div class="CombineProduct" data-category="t-a" data-id="92">
+  <div class="ProductC" data-category="t-a">
+    <div class="Product-img-container">
+  <img src="images/Mockup/c24.png" alt="2 Pack Cotton Breakaway Cat Collar Pink Strawberries and White Heart Shaped Pendant with Bell"  width="210" height="150">
+    </div>
+    <div class="Product-info">
+      <h3>2 Pack Cotton Breakaway Cat Collar Pink Strawberries and White Heart Shaped Pendant with Bell</h3>
+      <p class="price">₱100.00</p>
+      <div class="rating">★★★★☆</div>
+      <button class="addCart">Add to Cart</button>
+    </div>
+  </div>
+</div>
+
+<div class="CombineProduct" data-category="t-a" data-id="93">
+  <div class="ProductC" data-category="t-a">
+    <div class="Product-img-container">
+  <img src="images/Mockup/c25.png" alt="Brit Care Dental Cat Treats (50g)" width="210" height="150">
+    </div>
+    <div class="Product-info">
+      <h3>Brit Care Dental Cat Treats (50g)</h3>
+      <p class="price">₱700.00</p>
+      <div class="rating">★★★★☆</div>
+      <button class="addCart">Add to Cart</button>
+    </div>
+  </div>
+</div>
+
+<div class="CombineProduct" data-category="t-a" data-id="94">
+  <div class="ProductC" data-category="t-a">
+    <div class="Product-img-container">
+  <img src="images/Mockup/c26.png" alt="Brit Care Dental Cat Treats (50g)"  width="210" height="150">
+    </div>
+    <div class="Product-info">
+      <h3>Brit Care Dental Cat Treats (50g)</h3>
+      <p class="price">₱150.00</p>
+      <div class="rating">★★★★☆</div>
+      <button class="addCart">Add to Cart</button>
+    </div>
+  </div>
+</div>
+
+<div class="CombineProduct" data-category="t-a" data-id="95">
+  <div class="ProductC" data-category="t-a">
+    <div class="Product-img-container">
+  <img src="images/Mockup/c27.png" alt="2 Pack Cotton Breakaway Cat Collar Pink Strawberries and White Heart Shaped Pendant with Bell"  width="210" height="150">
+    </div>
+    <div class="Product-info">
+      <h3>2 Pack Cotton Breakaway Cat Collar Pink Strawberries and White Heart Shaped Pendant with Bell</h3>
+      <p class="price">₱100.00</p>
+      <div class="rating">★★★★☆</div>
+      <button class="addCart">Add to Cart</button>
+    </div>
+  </div>
+</div>
+
+<div class="CombineProduct" data-category="t-a" data-id="96">
+  <div class="ProductC" data-category="t-a">
+    <div class="Product-img-container">
+  <img src="images/Mockup/c28.png" alt="Andiker Cat Spiral Spring"  width="210" height="150">
+    </div>
+    <div class="Product-info">
+      <h3>Andiker Cat Spiral Spring</h3>
+      <p class="price">₱50.00</p>
+      <div class="rating">★★★★☆</div>
+      <button class="addCart">Add to Cart</button>
+    </div>
+  </div>
+</div>
+
+<div class="CombineProduct" data-category="t-a" data-id="97">
+  <div class="ProductC" data-category="t-a">
+    <div class="Product-img-container">
+  <img src="images/Mockup/c29.png" alt="Cat Scratching Post" width="210" height="150">
+    </div>
+    <div class="Product-info">
+      <h3>Cat Scratching Post</h3>
+      <p class="price">₱500.00</p>
+      <div class="rating">★★★★☆</div>
+      <button class="addCart">Add to Cart</button>
+    </div>
+  </div>
+</div>
+
+<div class="CombineProduct" data-category="t-a" data-id="98">
+  <div class="ProductC" data-category="t-a">
+    <div class="Product-img-container">
+  <img src="images/Mockup/c30.png" alt="Cat Scratching Post" width="210" height="150">
+    </div>
+    <div class="Product-info">
+      <h3>Aiersa Cat Toy Ball Launcher</h3>
+      <p class="price">₱100.00</p>
+      <div class="rating">★★★★☆</div>
+      <button class="addCart">Add to Cart</button>
+    </div>
+  </div>
+</div>
+
+<div class="CombineProduct" data-category="t-a" data-id="99">
+  <div class="ProductC" data-category="t-a">
+    <div class="Product-img-container">
+  <img src="images/Mockup/c31.png" alt="3-Tier Cat Track Toy with Spinning Balls"  width="210" height="150">
+    </div>
+    <div class="Product-info">
+      <h3>3-Tier Cat Track Toy with Spinning Balls</h3>
+      <p class="price">₱120.00</p>
+      <div class="rating">★★★★☆</div>
+      <button class="addCart">Add to Cart</button>
+    </div>
+  </div>
+</div>
+
+<div class="CombineProduct" data-category="t-a" data-id="100">
+  <div class="ProductC" data-category="t-a">
+    <div class="Product-img-container">
+  <img src="images/Mockup/c32.png" alt="Cat Teaser Wands"  width="210" height="150">
+    </div>
+    <div class="Product-info">
+      <h3>Cat Teaser Wands</h3>
+      <p class="price">₱100.00</p>
+      <div class="rating">★★★★☆</div>
+      <button class="addCart">Add to Cart</button>
+    </div>
+  </div>
+</div>
+
+
+<div class="CombineProduct" data-category="v-s" data-id="101">
+  <div class="ProductC" data-category="v-s">
+    <div class="Product-img-container">
+  <img src="images/Mockup/c33.png" alt="Petsup Cat Strip Spoon Squeeze N Lick Feeder"  width="210" height="150">
+    </div>
+    <div class="Product-info">
+      <h3>Petsup Cat Strip Spoon Squeeze N Lick Feeder</h3>
+      <p class="price">₱200.00</p>
+      <div class="rating">★★★★☆</div>
+      <button class="addCart">Add to Cart</button>
+    </div>
+  </div>
+</div>
+
+<div class="CombineProduct" data-category="v-s" data-id="102">
+  <div class="ProductC" data-category="v-s">
+    <div class="Product-img-container">
+  <img src="images/Mockup/c34.png" alt="Pet Wellbeing Kidney Support Gold for Cats"  width="210" height="150">
+    </div>
+    <div class="Product-info">
+      <h3>Pet Wellbeing Kidney Support Gold for Cats</h3>
+      <p class="price">₱100.00</p>
+      <div class="rating">★★★★☆</div>
+      <button class="addCart">Add to Cart</button>
+    </div>
+  </div>
+</div>
+
+<div class="CombineProduct" data-category="v-s" data-id="103">
+  <div class="ProductC" data-category="v-s">
+    <div class="Product-img-container">
+  <img src="images/Mockup/c35.png" alt="Furzee Vitamin Chews for Cats"  width="210" height="150">
+    </div>
+    <div class="Product-info">
+      <h3>Furzee Vitamin Chews for Cats</h3>
+      <p class="price">₱350.00</p>
+      <div class="rating">★★★★☆</div>
+      <button class="addCart">Add to Cart</button>
+    </div>
+  </div>
+</div>
+
+<div class="CombineProduct" data-category="v-s" data-id="104">
+  <div class="ProductC" data-category="v-s">
+    <div class="Product-img-container">
+  <img src="images/Mockup/c36.png" alt="Floof Pets Multivitamins Lite 30 Chews"  width="210" height="150">
+    </div>
+    <div class="Product-info">
+      <h3>Floof Pets Multivitamins Lite 30 Chews</h3>
+      <p class="price">₱180.00</p>
+      <div class="rating">★★★★☆</div>
+      <button class="addCart">Add to Cart</button>
+    </div>
+  </div>
+</div>
+
+<div class="CombineProduct" data-category="v-s" data-id="105">
+  <div class="ProductC" data-category="v-s">
+    <div class="Product-img-container">
+  <img src="images/Mockup/c37.png" alt="Multivitamin-Rich Chews for Cats"  width="210" height="150">
+    </div>
+    <div class="Product-info">
+      <h3>Multivitamin-Rich Chews for Cats</h3>
+      <p class="price">₱300.00</p>
+      <div class="rating">★★★★☆</div>
+      <button class="addCart">Add to Cart</button>
+    </div>
+  </div>
+</div>
+
+<div class="CombineProduct" data-category="v-s" data-id="106">
+  <div class="ProductC" data-category="v-s">
+    <div class="Product-img-container">
+  <img src="images/Mockup/c38.png" alt="VEV Vitamin Cat Supplement"  width="210" height="150">
+    </div>
+    <div class="Product-info">
+      <h3>VEV Vitamin Cat Supplemen</h3>
+      <p class="price">₱80.00</p>
+      <div class="rating">★★★★☆</div>
+      <button class="addCart">Add to Cart</button>
+    </div>
+  </div>
+</div>
+
+    
+    </div>
+    
+</div>
+
+        </main>
+
+
+
+    </main>
+
+<!-- Footer -->
+<footer class = "footer">
+    <div class = "lineF"></div>
+<!-- Links to other pages -->
+<div class = "footerCon">
+    <div class = "footerL">
+        <div class = "LinksC">
+            <h3>Shops</h3>
+        <ul>
+             <li><a href = "dog-shop.html">Dog</a></li>
+             <li><a href = "cat-shop.html">Cat</a></li>
+             <li><a href = "Essentials.html">Home Essentials</a></li>
+             <li><a href = "all-products.html">All Products</a></li>
+        </ul>
+        </div>
+
+        <div class = "LinksC">
+            <h3>About</h3>
+        <ul>
+             <li><a href = "aboutUs.html">About Us</a></li>
+             <li><a href = "terms.html">Terms & Condition</a></li>
+             <li><a href = "privacy.html">Privacy Policy</a></li>
+             <li><a href = "faq.html">FAQs</a></li>
+             <li><a href = "contacts.html">Contact Us</a></li>
+        </ul>
+        </div>
+    </div>
+
+<!-- News Form -->
+
+    <div class = "Nletter">
+        <form class = "newsletterF">
+            <input type = "Email" placeholder = "Enter your email to get the latest news..." required>
+            <button type = "submit" class = "signup-btn">Sign Up</button>
+        </form>
+
+    </div>
+
+    
+</div>
+<div class = "lineF"></div>
+<div class = "bottomCon">
+<div class = "footerB">
+    <p>Paws&Claws © 2025. All rights reserved</p>
+</div>
+
+<div class="social-icons">
+    <a href="https://www.google.com/url?sa=i&url=https%3A%2F%2Ficons8.com%2Ficons%2Fset%2Ffacebook--white&psig=AOvVaw2n77kFBQq3RQYE16vkU3ck&ust=1747181665819000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCODtmaiVn40DFQAAAAAdAAAAABAE"><img src = "images/fbbilog.png"></a>
+    <a href="https://x.com/pawsnclaws2025?s=21&fbclid=IwY2xjawKPIqdleHRuA2FlbQIxMABicmlkETEySWNIMW1iajQ1M3hCcDBlAR6qXoZBpd6C_jvitX5eN1ALL2lUoAU39BJOcyFiImmrOTpJG-5GflheLeZVDQ_aem_DRc0ad6v7lUbWm9QCsdodw"><img src = "images/twitbilog.png"></a>
+    <a href="https://www.instagram.com/official_pawsandclaws/profilecard/?igsh=MWxzYWRndDV0NDQ1OA%3D%3D&fbclid=IwY2xjawKPIfFleHRuA2FlbQIxMABicmlkETEySWNIMW1iajQ1M3hCcDBlAR65x-ho7gtXeXJJqUfJRUL_-FPI2MAFoA741JXsMrRFoqSkyDsoYSaoAi01DA_aem__fhwmR42rKG7GB6GBdHzJQ"><img src = "images/instabilog.png"></a>
+  </div>
+
+</div>
+
+</footer>
+</body>
+<script>
+    function getURLParameter(name) {
+  const urlParams = new URLSearchParams(window.location.search);
+  return urlParams.get(name);
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  const checkboxes = document.querySelectorAll('.checkbox-filters input');
+  const products = document.querySelectorAll('.Product-Aisle > div'); // ProductD / ProductC / etc.
+
+  function filterProducts() {
+    const selectedCategories = Array.from(checkboxes)
+      .filter(cb => cb.checked)
+      .map(cb => cb.value);
+
+    products.forEach(product => {
+      const category = product.dataset.category;
+      const show = selectedCategories.includes('all') || selectedCategories.includes(category);
+      product.style.display = show ? 'block' : 'none';
+    });
+  }
+
+  // Pre-check filter from URL param
+  const initialFilter = getURLParameter('filter');
+  if (initialFilter) {
+    checkboxes.forEach(cb => {
+      cb.checked = cb.value === initialFilter;
+    });
+    filterProducts();
+  }
+
+  // Hook up normal filter behavior
+  checkboxes.forEach(cb => {
+    cb.addEventListener('change', () => {
+      if (cb.value === 'all' && cb.checked) {
+        checkboxes.forEach(other => {
+          if (other.value !== 'all') other.checked = false;
+        });
+      } else if (cb.checked) {
+        const all = document.querySelector('input[value="all"]');
+        if (all) all.checked = false;
+      }
+      filterProducts();
+    });
+  });
+});
+</script>
+<script>
+document.querySelectorAll('.CombineProduct').forEach(card => {
+  card.addEventListener('click', (e) => {
+    // Prevent if the actual clicked element is the button (or inside it)
+    if (e.target.closest('.addCart')) return;
+    
+    const id = card.dataset.id;
+    window.location.href = `Products.html?id=${id}`;
+  });
+});
+</script>
+
+</html>
+
+
+<style> 
+
+    .CatShop {
+        justify-items: center;
+        margin-top: 50px;
+    }
+
+</style>

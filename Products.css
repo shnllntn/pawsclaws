@@ -1,0 +1,271 @@
+ .ProductCon {
+  display: flex;
+  gap: 10px;
+  padding: 20px;
+  overflow-x: hidden;
+     scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+     flex-wrap: nowrap;
+     width: 100%;
+   
+
+}
+
+.Product {
+    flex: 0 0 335px;
+    max-width: 335px;
+    min-width: 250px;
+    max-height: 400px;
+    min-height: 350px;
+    padding: 20px;
+    font-size: 16px;
+    margin: 2px;
+    background-color: white;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+    position: relative;
+   
+}
+
+
+  .ProductD{
+  
+  flex: 0 0 250px;
+  max-width: 250px;
+  min-width: 250px;
+  max-height: 350px;
+  min-height: 350px;
+  background-color: #ffffff; 
+  padding: 5px;
+  font-size: 15px;
+  margin: 0 2px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  text-align: center;
+  position: relative;
+  padding-right:2px
+
+}
+
+.ProductC {
+   flex: 0 0 250px;
+  max-width: 250px;
+  min-width: 250px;
+  max-height: 350px;
+  min-height: 350px;
+  background-color: #ffffff; 
+  padding: 5px;
+  font-size: 15px;
+  margin: 0 2px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  text-align: center;
+  position: relative;
+  padding-right:2px
+}
+
+.ProductE {
+     flex: 0 0 250px;
+  max-width: 250px;
+  min-width: 250px;
+  max-height: 350px;
+  min-height: 350px;
+  background-color: #ffffff; 
+  padding: 5px;
+  font-size: 15px;
+  margin: 0 2px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  text-align: center;
+  position: relative;
+  padding-right:2px
+}
+
+.Product,
+.ProductD,
+.ProductC,
+.ProductE {
+  cursor: pointer;
+}
+
+.Product img, .ProductD img {
+  max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* Prevents stretching */
+    padding: 0;
+}
+
+.addCart {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    cursor: pointer;
+    margin-top: 15px; /* Reduced from 60px */
+    width: calc(100% - 10px); /* Full width with padding */
+}
+.Product-img-container {
+    height: 150px; /* Fixed height for images */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #2a3f7a;
+}
+
+#New, #Featured, #Exclusive {
+    height: auto;
+    width: 100%;
+    background-color: #F9EED8;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+#Featured {
+
+    margin-top: 10px;
+}
+
+.DogShop img, .CatShop img, .EssenShop img {
+
+  border-bottom: 2px solid #2a3f7a;
+  border-radius: 35%;
+}
+
+.gap {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+}
+
+.V a{
+
+    text-decoration: none;
+    color: #465fa2;
+    font-weight: bold;
+}
+
+
+
+
+.carousel, .ProductCon { 
+    width: 100%; 
+}
+
+.Product figure {
+    margin: 0;
+}
+
+.CombineProduct:hover, .addCart:hover {
+
+  transform: scale(1.1);
+  transition: 0.2s ease-in;
+}
+
+
+.CombineProduct {
+
+    display: flex;
+    flex-direction: column;
+
+
+    margin: 0;
+    padding: 0;
+
+}
+
+.CombineProduct .Product  {
+    margin-top: 0;
+}
+
+.CombineProduct img {
+    padding: 0;
+}
+
+
+
+.carousel {
+    position: relative;
+    margin: 0 auto;
+    overflow: visible;
+  }
+  
+  /* Prev/Next buttons */
+  .carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background:none;
+    color: black;
+    border: 2px solid black;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+  }
+  .carousel-btn[disabled] {
+    opacity: 0.3;
+    cursor: default;
+  }
+  .carousel-btn.prev { left: 10px; }
+  .carousel-btn.next { right: 10px; }
+
+  .Product-Aisle {
+    display: flex;
+    flex-wrap: wrap; /* Changed from nowrap */
+    gap: 20px;
+    padding: 20px;
+    flex: 1; /* Take remaining space */
+    overflow: visible; /* Remove any overflow hiding */
+}
+
+.checkbox-filters {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+
+  }
+  
+  .checkbox-filters li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .checkbox-filters label {
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    color: #465FA2;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+  }
+
+  .preference {
+    margin-left: 40px;
+    width: 250px; /* Fixed width for filters */
+    flex-shrink: 0; /* Prevent shrinking */
+}
+  
+  .checkbox-filters input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    accent-color: #465FA2;
+  }
+  
+  .checkbox-filters label:hover {
+    background-color: #f0f4ff;
+  }
+  
+  .checkbox-filters input:checked + label {
+    background-color: #465FA2;
+    color: white;
+  }
+
+  .layout {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    padding: 20px;
+}

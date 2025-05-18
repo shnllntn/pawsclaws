@@ -1,0 +1,155 @@
+.hero {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+    height: 500px;
+    padding: 0 100px;
+    
+  }
+
+  .heroBG {
+    background-color: #3f6699;
+  }
+  
+  .heroCon {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease;
+  }
+  
+  .slideA, .slide {
+    min-width: 100%;
+    position: relative;
+  }
+  
+  .slideA::before, .slide::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100px;
+    right: -100px;
+    bottom: 0;
+    background: inherit;
+    filter: blur(10px);
+    z-index: 1;
+    pointer-events: none;
+  }
+  
+  .slideA img, .slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .slideC {
+    position: absolute;
+    bottom: 20%;
+    left: 10%;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    max-width: 400px;
+    border-radius: 5px;
+    z-index: 3;
+  }
+  
+  .slideC h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .slideC p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+  
+  .shop-btn, .go-down {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #000000;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+  }
+  
+  .shop-btn:hover, .go-down:hover {
+    background: #2e2e2e;
+  }
+  
+  .dots {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 4;
+  }
+  
+  .dot, .dotA {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+  }
+  
+  .dotA {
+    background-color: white;
+  }
+  
+  .slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: black;
+    color: white;
+    border: none;
+    font-size: 1.5rem;
+    padding: 15px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 4;
+  }
+  
+  .prev-btn {
+    left: 0px;
+  }
+  
+  .next-btn {
+    right: 0px;
+  }
+  
+  @media (max-width: 768px) {
+    .hero {
+      height: 300px;
+      padding: 0 50px;
+    }
+  
+    .slideA::before, .slide::before {
+      left: -50px;
+      right: -50px;
+      filter: blur(5px);
+    }
+  
+    .slideC {
+      bottom: 10%;
+      left: 5%;
+      max-width: 90%;
+      padding: 15px;
+    }
+  
+    .slideC h2 {
+      font-size: 1.8rem;
+    }
+  
+    .slideC p {
+      font-size: 1rem;
+    }
+  }

@@ -1,0 +1,280 @@
+.sidebar {
+
+    color:black;
+    background-color: #F9EED8;
+}
+
+
+.sidebar-profile {
+    display: flex;
+    margin-top: 100px;
+}
+
+.sidebar-userinfo {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+.sidebar-userinfo a{
+  margin-top: 0;
+  margin-bottom: 20px;
+
+}
+
+.sidebar-userinfo h3{
+  margin-bottom: 0;
+
+}
+
+
+.logout-btn {
+    margin-top: 400px;
+    margin-bottom: 80px;
+    background-color: transparent;
+    border: none;
+    text-decoration: underline;
+    font-size: 19px;
+    margin-left: 40px;
+}
+
+
+
+label {
+        font-size: 16px;
+}
+
+
+
+
+/* 2. When checked, fill it (you can change the color as you like) */
+
+
+.main-content {
+    background-color: #dad0bc;
+    border-radius: 50px;
+    height: 575px;
+    width: 1350px;
+    margin-top: 125px;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.Profile {
+    margin-left: 30px;
+}
+
+.Profile p {
+    margin: 0;
+}
+
+.Profile h2{ 
+    margin-bottom: 0;
+}
+
+.line {
+    height: 2px;
+    width: 1225px;
+    background-color: #b3a78f;
+}
+
+.form-group {
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    gap: 2px;
+}
+
+
+main input[type="text"],
+main input[type="email"],
+input[type="tel"],
+input[type="date"],
+textarea {
+    padding: 1px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    border-radius: 2px;
+    background-color: #fff;
+    max-width: 200px;
+}
+
+.userInfo button {
+    padding: 7px 20px;
+    background-color: #000;
+    color: white;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+
+.userInfo {
+    margin-top: 60px;
+    margin-left: 140px;
+    padding: 0;
+    margin-right: 0;
+}
+
+.main-content {
+
+    display: flex;
+    flex-direction: row;
+}
+
+.Profile-content {
+
+display: flex;
+flex-direction: row;
+
+}
+
+.vert {
+  width: 2px;
+  height: 400px;
+  background-color: #b3a78f;
+
+  margin-left: 60px;
+
+}
+
+.hidden {
+  display: none;
+}
+
+.edit-mode .edit-field {
+  display: inline-block;
+}
+.edit-mode .field-display span {
+  display: none;
+}
+
+.prf-change {
+
+  margin-left: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+  margin-top: 30px;
+}
+
+
+
+.prf-change .hint {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+#profile-pic-input {
+  position: absolute;
+  width: 0;
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+/* Style the label to look like a button */
+.file-button {
+  display: inline-block;
+  padding: 4px 8px;
+  background-color: transparent;
+  font-weight: bold;
+  border: 2px solid black;
+  cursor: pointer;
+  text-align: center;
+  user-select: none;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+#cropper-modal.hidden { display: none; }
+#cropper-modal { 
+  position: fixed; top:0; left:0; right:0; bottom:0;
+  display: flex; align-items:center; justify-content:center;
+  z-index:1000;
+}
+.modal-backdrop {
+  position:absolute; top:0; left:0; right:0; bottom:0;
+  background:rgba(0,0,0,0.5);
+}
+.modal-content {
+  position:relative; background:white; padding:1rem; z-index:1;
+}
+#crop-source { max-width:400px; max-height:400px; display:block; }
+
+
+/* 1) Hide the native file input */
+#profile-pic-input {
+  position: absolute;
+  width: 0; height: 0;
+  opacity: 0; overflow: hidden;
+  pointer-events: none;
+}
+
+/* 2) Style the label as your button */
+.file-button {
+  display: inline-block;
+  padding: 6px 12px;
+  background-color: transparent;
+  border: 2px solid black;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  user-select: none;
+  margin-top: 8px;
+}
+
+/* 3) Lock the prf-change panel until .edit-mode */
+.Profile-content:not(.edit-mode) .prf-change {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/* 4) Only show the file-button in edit mode */
+.Profile-content:not(.edit-mode) .file-button {
+  display: none;
+}
+
+/* 5) Cropper modal styling */
+#cropper-modal.hidden { display: none; }
+#cropper-modal {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  display: flex; align-items: center; justify-content: center;
+  z-index: 1000;
+}
+.modal-backdrop {
+  position: absolute; top:0; left:0; right:0; bottom:0;
+  background: rgba(0,0,0,0.5);
+}
+.modal-content {
+  position: relative;
+  background: white;
+  padding: 1rem;
+  z-index: 1;
+  border-radius: 6px;
+}
+#crop-source {
+  max-width: 400px;
+  max-height: 400px;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+#profile-pic-preview {
+  border-radius: 50%;
+  border: 2px solid #b3a78f;
+  width: 125px;
+  height: 125px;
+  object-fit: cover;
+}

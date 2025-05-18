@@ -1,0 +1,1082 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="general.css">
+    <link rel="stylesheet" href="Products.css">
+    <link rel="stylesheet" href="background.css">
+<script src="java/input.js" defer></script>
+<script src="java/filter.js"></script>
+<script src="java/accounts.js"></script>
+<script src="java/products.js" defer></script>
+<script src="java/search.js" defer></script>
+    <title>Dog Shop - Paws&Claws Pet Store</title>
+</head>
+
+<body>
+    <header>
+        <div class="LogoL">
+            <a href = "index.html"><img src = "images/paws&claws.jpg" width="80" alt="Paws and Claws Logo">
+            </a>
+        </div>
+<div class = "navi">
+        <nav class = "Major">
+            <ul>
+                <li><a href="all-products.html">All Products</a></li>
+                <li class="Drop">
+                    <a href="dog-shop.html">Dogs</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="dog-shop.html?filter=all">All Products</a></li>
+                        <li><a href="dog-shop.html?filter=t-a">Toys & Accessories</a></li>
+                        <li><a href="dog-shop.html?filter=f-t">Dog Food & Treats</a></li>
+                        <li><a href="dog-shop.html?filter=v-s">Vitamins & Supplements</a></li>
+                    </ul>
+                </li>
+                <li class="Drop Drop-cat">
+                    <a href="cat-shop.html">Cats</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="cat-shop.html?filter=all">All Products</a></li>
+                        <li><a href="cat-shop.html?filter=t-a">Toys & Accessories</a></li>
+                        <li><a href="cat-shop.html?filter=f-t">Cat Food & Treats</a></li>
+                        <li><a href="cat-shop.html?filter=v-s">Vitamins & Supplements</a></li>
+                    </ul>
+                </li>
+                <li><a href="Essentials.html">Home Essentials</a></li>
+
+                <li><a href="About.html">About</a></li>
+            </ul>
+        </nav>
+
+        <nav class = "Minor">
+            <ul>
+
+<li class = "search-item">
+                <div class="search-container">
+                <!-- Magnifier button toggles the search box -->
+                <button id="search-toggle" class="search-toggle">
+                <img src="images/search.png" width="25" alt="Search">
+                </button>
+                <!-- Hidden search input and results; shown when container has class "open" -->
+                <div class="search-box">
+                <input id="search-input" type="text" placeholder="Search products…" autocomplete="off">
+                <div id="search-results" class="search-results"></div>
+                </div>
+              </div>
+              </li>
+                <li><a href="Cart.html" class = "hover"><img src = "images/cart.png" width="25"></a></li>
+                <li><a href="Wish.html" class = "hover"><img src = "images/heart-3510.png" width="25"></a></li>
+                <li id="auth-nav-item"><a href="login.html" class = "hover"><img src = "images/login.png" width="25"></a></li>
+            </ul>
+        </nav>
+
+    </div>
+
+
+
+    </header>
+    <main>
+        <main>
+            <div class = "DogShop">
+                  <img src = "images/doglogo.png" width = "150px" alt = "Dog shop">
+                  <h1>Dog Shop</h1>
+            </div>
+
+
+<div class = "layout">
+
+    <div class = "preference">
+        <h3>Filters</h3>
+        <div class="filters">
+            <h4>Categories</h4>
+            <ul class="checkbox-filters">
+                <li>
+                  <label>
+                    <input type="checkbox" value="all" checked> All Products
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input type="checkbox" value="t-a"> Toys & Accessories
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input type="checkbox" value="f-t"> Dog Food & Treats
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input type="checkbox" value="v-s"> Vitamins & Supplements
+                  </label>
+                </li>
+              </ul>
+          </div>
+    
+    
+    </div>
+    
+    <div class = Product-Aisle>
+
+      <!--1 to 10-->
+
+<div class="CombineProduct" data-category="f-t" data-id="1">
+  <div class="ProductD">
+    <div class="Product-img-container">
+      <img src="images/Mockup/d1.png" alt="PEDIGREE Wet Dog Food Can (400g)">
+    </div>
+    <div class="Product-info">
+      <h3>PEDIGREE Wet Dog Food Can (400g)</h3>
+      <p class="price">₱320.00</p>
+      <div class="rating">★★★★☆</div>
+      <button class="addCart">Add to Cart</button>
+    </div>
+  </div>
+</div>
+
+<div class="CombineProduct" data-category="f-t" data-id="2">
+  <div class="ProductD">
+    <div class="Product-img-container">
+      <img src="images/Mockup/d2.png" alt="PEDIGREE Wet Food for Dogs Puppy (80g)">
+    </div>
+    <div class="Product-info">
+      <h3>PEDIGREE Wet Food for Dogs Puppy (80g)</h3>
+      <p class="price">₱30.00</p>
+      <div class="rating">★★★★☆</div>
+      <button class="addCart">Add to Cart</button>
+    </div>
+  </div>
+</div>
+
+<div class="CombineProduct" data-category="f-t" data-id="3">
+  <div class="ProductD">
+    <div class="Product-img-container">
+      <img src="images/Mockup/d3.png" alt="CESAR Wet Premium Dog Food 100g">
+    </div>
+    <div class="Product-info">
+      <h3>CESAR Wet Premium Dog Food 100g</h3>
+      <p class="price">₱75.00</p>
+      <div class="rating">★★★★☆</div>
+      <button class="addCart">Add to Cart</button>
+    </div>
+  </div>
+</div>
+
+<div class="CombineProduct" data-category="f-t" data-id="4">
+  <div class="ProductD">
+    <div class="Product-img-container">
+      <img src="images/Mockup/d4.png" alt="Maxwell Adult Dog Wet Food Can Beef with Vegetable 375g">
+    </div>
+    <div class="Product-info">
+      <h3>Maxwell Adult Dog Wet Food Can Beef with Vegetable 375g</h3>
+      <p class="price">₱405.00</p>
+      <div class="rating">★★★★★</div>
+      <button class="addCart">Add to Cart</button>
+    </div>
+  </div>
+</div>
+
+<div class="CombineProduct" data-category="f-t" data-id="5">
+  <div class="ProductD">
+    <div class="Product-img-container">
+      <img src="images/Mockup/d5.png" alt="Maxwell Adult Dog Wet Food Can Beef with Vegetable 375g">
+    </div>
+    <div class="Product-info">
+      <h3>Maxwell Adult Dog Wet Food Can Beef with Vegetable 375g</h3>
+      <p class="price">₱405.00</p>
+      <div class="rating">★★★★☆</div>
+      <button class="addCart">Add to Cart</button>
+    </div>
+  </div>
+</div>
+
+<div class="CombineProduct" data-category="f-t" data-id="6">
+  <div class="ProductD">
+    <div class="Product-img-container">
+      <img src="images/Mockup/d6.png" alt="PEDIGREE Adult Dog Food in Beef & Vegetable Flavor 20kg">
+    </div>
+    <div class="Product-info">
+      <h3>PEDIGREE Adult Dog Food in Beef & Vegetable Flavor 20kg</h3>
+      <p class="price">₱2,645.00</p>
+      <div class="rating">★★★★☆</div>
+      <button class="addCart">Add to Cart</button>
+    </div>
+  </div>
+</div>
+
+<div class="CombineProduct" data-category="f-t" data-id="7">
+  <div class="ProductD">
+    <div class="Product-img-container">
+      <img src="images/Mockup/d7.png" alt="TopBreed Adult Meal Dry Dog Food 20kg">
+    </div>
+    <div class="Product-info">
+      <h3>TopBreed Adult Meal Dry Dog Food 20kg</h3>
+      <p class="price">₱1,175.00</p>
+      <div class="rating">★★★★☆</div>
+      <button class="addCart">Add to Cart</button>
+    </div>
+  </div>
+</div>
+
+<div class="CombineProduct" data-category="f-t" data-id="8">
+  <div class="ProductD">
+    <div class="Product-img-container">
+      <img src="images/Mockup/d8.png" alt="Good Boy Adult Dog Food 5kg – Beef">
+    </div>
+    <div class="Product-info">
+      <h3>Good Boy Adult Dog Food 5kg – Beef</h3>
+      <p class="price">₱530.00</p>
+      <div class="rating">★★★★☆</div>
+      <button class="addCart">Add to Cart</button>
+    </div>
+  </div>
+</div>
+
+<div class="CombineProduct" data-category="f-t" data-id="9">
+  <div class="ProductD">
+    <div class="Product-img-container">
+      <img src="images/Mockup/d9.png" alt="ALPHAPRO Regular Bites Adult Beef 10kg">
+    </div>
+    <div class="Product-info">
+      <h3>ALPHAPRO Regular Bites Adult Beef 10kg</h3>
+      <p class="price">₱930.00</p>
+      <div class="rating">★★★★☆</div>
+      <button class="addCart">Add to Cart</button>
+    </div>
+  </div>
+</div>
+
+<div class="CombineProduct" data-category="f-t" data-id="10">
+  <div class="ProductD">
+    <div class="Product-img-container">
+      <img src="images/Mockup/d10.png" alt="Nutri Chunks Maintenance Adult Beef 5kg">
+    </div>
+    <div class="Product-info">
+      <h3>Nutri Chunks Maintenance Adult Beef 5kg</h3>
+      <p class="price">₱750.00</p>
+      <div class="rating">★★★★☆</div>
+      <button class="addCart">Add to Cart</button>
+    </div>
+  </div>
+</div>
+
+<!--11 to 20-->
+
+<div class="CombineProduct" data-category="f-t" data-id="11">
+  <div class="ProductD">
+    <div class="Product-img-container">
+      <img src="images/Mockup/d11.png" alt="Little Brutus Milky Bones Dog treats 120g">
+    </div>
+    <div class="Product-info">
+      <h3>Little Brutus Milky Bones Dog treats 120g</h3>
+      <p class="price">₱40.00</p>
+      <div class="rating">★★★★☆</div>
+      <button class="addCart">Add to Cart</button>
+    </div>
+  </div>
+</div>
+
+<div class="CombineProduct" data-category="f-t" data-id="12">
+  <div class="ProductD">
+    <div class="Product-img-container">
+      <img src="images/Mockup/d12.png" alt="PEDIGREE Schmackos Dog Treats 70g">
+    </div>
+    <div class="Product-info">
+      <h3>PEDIGREE Schmackos Dog Treats 70g</h3>
+      <p class="price">₱100.00</p>
+      <div class="rating">★★★★☆</div>
+      <button class="addCart">Add to Cart</button>
+    </div>
+  </div>
+</div>
+
+<div class="CombineProduct" data-category="f-t" data-id="13">
+  <div class="ProductD">
+    <div class="Product-img-container">
+      <img src="images/Mockup/d13.png" alt="Dentalight Nutri Diner Dental Dog Treats 90g">
+    </div>
+    <div class="Product-info">
+      <h3>Dentalight Nutri Diner Dental Dog Treats 90g</h3>
+      <p class="price">₱100.00</p>
+      <div class="rating">★★★★☆</div>
+      <button class="addCart">Add to Cart</button>
+    </div>
+  </div>
+</div>
+
+<div class="CombineProduct" data-category="f-t" data-id="14">
+  <div class="ProductD">
+    <div class="Product-img-container">
+      <img src="images/Mockup/d14.png" alt="Smartheart Dog Treats Cheddar Cube 50g">
+    </div>
+    <div class="Product-info">
+      <h3>Smartheart Dog Treats Cheddar Cube 50g</h3>
+      <p class="price">₱100.00</p>
+      <div class="rating">★★★★☆</div>
+      <button class="addCart">Add to Cart</button>
+    </div>
+  </div>
+</div>
+
+<div class="CombineProduct" data-category="f-t" data-id="15">
+  <div class="ProductD">
+    <div class="Product-img-container">
+      <img src="images/Mockup/d15.png" alt="Nutri Chunks Beef Sticks 70g">
+    </div>
+    <div class="Product-info">
+      <h3>Nutri Chunks Beef Sticks 70g</h3>
+      <p class="price">₱80.00</p>
+      <div class="rating">★★★★☆</div>
+      <button class="addCart">Add to Cart</button>
+    </div>
+  </div>
+</div>
+
+<div class="CombineProduct" data-category="f-t" data-id="16">
+  <div class="ProductD">
+    <div class="Product-img-container">
+      <img src="images/Mockup/d16.png" alt="Dr Shiba Happy Tummy Healthy Dog Treats">
+    </div>
+    <div class="Product-info">
+      <h3>Dr Shiba Happy Tummy Healthy Dog Treats</h3>
+      <p class="price">₱469.00</p>
+      <div class="rating">★★★★☆</div>
+      <button class="addCart">Add to Cart</button>
+    </div>
+  </div>
+</div>
+
+<div class="CombineProduct" data-category="f-t" data-id="17">
+  <div class="ProductD">
+    <div class="Product-img-container">
+      <img src="images/Mockup/d17.png" alt="Petsup Furench Fries 130g">
+    </div>
+    <div class="Product-info">
+      <h3>Petsup Furench Fries 130g</h3>
+      <p class="price">₱100.00</p>
+      <div class="rating">★★★★☆</div>
+      <button class="addCart">Add to Cart</button>
+    </div>
+  </div>
+</div>
+
+<div class="CombineProduct" data-category="f-t" data-id="18">
+  <div class="ProductD">
+    <div class="Product-img-container">
+      <img src="images/Mockup/d18.png" alt="Petsup Dog Sausage 30pcs Mixed Flavors Treats">
+    </div>
+    <div class="Product-info">
+      <h3>Petsup Dog Sausage 30pcs Mixed Flavors Treats</h3>
+      <p class="price">₱70.00</p>
+      <div class="rating">★★★★☆</div>
+      <button class="addCart">Add to Cart</button>
+    </div>
+  </div>
+</div>
+
+<div class="CombineProduct" data-category="f-t" data-id="19">
+  <div class="ProductD">
+    <div class="Product-img-container">
+      <img src="images/Mockup/d19.png" alt="Harley's All Natural Dehydrated Chicken Tender Fillet Treats for Dogs">
+    </div>
+    <div class="Product-info">
+      <h3>Harley's All Natural Dehydrated Chicken Tender Fillet Treats for Dogs</h3>
+      <p class="price">₱240.00</p>
+      <div class="rating">★★★★☆</div>
+      <button class="addCart">Add to Cart</button>
+    </div>
+  </div>
+</div>
+
+<div class="CombineProduct" data-category="f-t" data-id="20">
+  <div class="ProductD">
+    <div class="Product-img-container">
+      <img src="images/Mockup/d20.png" alt="SmartHeart Dog Treat Grilled Beef 100g">
+    </div>
+    <div class="Product-info">
+      <h3>SmartHeart Dog Treat Grilled Beef 100g</h3>
+      <p class="price">₱80.00</p>
+      <div class="rating">★★★★☆</div>
+      <button class="addCart">Add to Cart</button>
+    </div>
+  </div>
+</div>
+
+<!--21 to 30-->
+
+<div class="CombineProduct" data-category="t-a" data-id="21">
+  <div class="ProductD" data-category="t-a">
+    <div class="Product-img-container">
+      <img src="images/Mockup/d21.png" alt="Harness With Bowknot Mesh Padded For Small Puppy Dogs" width="248" height="175">
+    </div>
+    <div class="Product-info">
+      <h3>Harness With Bowknot Mesh Padded For Small Puppy Dogs</h3>
+      <p class="price">₱250.00</p>
+      <div class="rating">★★★★☆</div>
+      <button class="addCart">Add to Cart</button>
+    </div>
+  </div>
+</div>
+
+<div class="CombineProduct" data-category="t-a" data-id="22">
+  <div class="ProductD" data-category="t-a">
+    <div class="Product-img-container">
+      <img src="images/Mockup/d22.png" alt="Adjustable Dog Harness with Backpack Chest Vest Back with Leash" width="248" height="175">
+    </div>
+    <div class="Product-info">
+      <h3>Adjustable Dog Harness with Backpack Chest Vest Back with Leash</h3>
+      <p class="price">₱120.00</p>
+      <div class="rating">★★★★☆</div>
+      <button class="addCart">Add to Cart</button>
+    </div>
+  </div>
+</div>
+
+<div class="CombineProduct" data-category="t-a" data-id="23">
+  <div class="ProductD" data-category="t-a">
+    <div class="Product-img-container">
+      <img src="images/Mockup/d23.png" alt="Adjustable Dog Training Leash Strap Rope" width="248" height="175">
+    </div>
+    <div class="Product-info">
+      <h3>Adjustable Dog Training Leash Strap Rope</h3>
+      <p class="price">₱200.00</p>
+      <div class="rating">★★★★☆</div>
+      <button class="addCart">Add to Cart</button>
+    </div>
+  </div>
+</div>
+
+<div class="CombineProduct" data-category="t-a" data-id="24">
+  <div class="ProductD" data-category="t-a">
+    <div class="Product-img-container">
+      <img src="images/Mockup/d24.png" alt="Dog Silicone Rain Boots & Anti-Slip Outing Shoes" width="248" height="175">
+    </div>
+    <div class="Product-info">
+      <h3>Dog Silicone Rain Boots & Anti-Slip Outing Shoes</h3>
+      <p class="price">₱300.00</p>
+      <div class="rating">★★★★☆</div>
+      <button class="addCart">Add to Cart</button>
+    </div>
+  </div>
+</div>
+
+<div class="CombineProduct" data-category="t-a" data-id="25">
+  <div class="ProductD" data-category="t-a">
+    <div class="Product-img-container">
+      <img src="images/Mockup/d25.png" alt="Dog Collar With Bell Safety Buckle Neck" width="248" height="175">
+    </div>
+    <div class="Product-info">
+      <h3>Dog Collar With Bell Safety Buckle Neck</h3>
+      <p class="price">₱80.00</p>
+      <div class="rating">★★★★☆</div>
+      <button class="addCart">Add to Cart</button>
+    </div>
+  </div>
+</div>
+
+<div class="CombineProduct" data-category="t-a" data-id="26">
+  <div class="ProductD" data-category="t-a">
+    <div class="Product-img-container">
+      <img src="images/Mockup/d26.png" alt="Bark and Spark Mickey Mouse Dog Collar Small Black and White" width="248" height="175">
+    </div>
+    <div class="Product-info">
+      <h3>Bark and Spark Mickey Mouse Dog Collar Small Black and White</h3>
+      <p class="price">₱1,500.00</p>
+      <div class="rating">★★★★☆</div>
+      <button class="addCart">Add to Cart</button>
+    </div>
+  </div>
+</div>
+
+<div class="CombineProduct" data-category="t-a" data-id="27">
+  <div class="ProductD" data-category="t-a">
+    <div class="Product-img-container">
+      <img src="images/Mockup/d27.png" alt="Dog Scarf & Bandana Prints" width="248" height="175">
+    </div>
+    <div class="Product-info">
+      <h3>Dog Scarf & Bandana Prints</h3>
+      <p class="price">₱100.00</p>
+      <div class="rating">★★★★☆</div>
+      <button class="addCart">Add to Cart</button>
+    </div>
+  </div>
+</div>
+
+<div class="CombineProduct" data-category="t-a" data-id="28">
+  <div class="ProductD" data-category="t-a">
+    <div class="Product-img-container">
+      <img src="images/Mockup/d28.png" alt="InnoPet Big Dog Clothes Spring and Summer" width="248" height="175">
+    </div>
+    <div class="Product-info">
+      <h3>InnoPet Big Dog Clothes Spring and Summer</h3>
+      <p class="price">₱520.00</p>
+      <div class="rating">★★★★☆</div>
+      <button class="addCart">Add to Cart</button>
+    </div>
+  </div>
+</div>
+
+<div class="CombineProduct" data-category="t-a" data-id="29">
+  <div class="ProductD" data-category="t-a">
+    <div class="Product-img-container">
+      <img src="images/Mockup/d29.png" alt="Pet Vest Clothes Dog Fashion T-Shirt Clothing" width="248" height="175">
+    </div>
+    <div class="Product-info">
+      <h3>Pet Vest Clothes Dog Fashion T-Shirt Clothing</h3>
+      <p class="price">₱70.00</p>
+      <div class="rating">★★★★☆</div>
+      <button class="addCart">Add to Cart</button>
+    </div>
+  </div>
+</div>
+
+<div class="CombineProduct" data-category="t-a" data-id="30">
+  <div class="ProductD" data-category="t-a">
+    <div class="Product-img-container">
+      <img src="images/Mockup/d30.png" alt="Dog Mouth Sets Adjustable Muzzle Basket Anti-Biting Mouth Cover" width="248" height="175">
+    </div>
+    <div class="Product-info">
+      <h3>Dog Mouth Sets Adjustable Muzzle Basket Anti-Biting Mouth Cover</h3>
+      <p class="price">₱150.00</p>
+      <div class="rating">★★★★☆</div>
+      <button class="addCart">Add to Cart</button>
+    </div>
+  </div>
+</div>
+
+<!--31 to 40-->
+
+  <div class="CombineProduct" data-category="t-a" data-id="31">
+    <div class="ProductD" data-category="t-a">
+      <div class="Product-img-container">
+        <img src="images/Mockup/d31.png" alt="Dog Chew Toy for Large Dogs" width="248" height="175">
+      </div>
+      <div class="Product-info">
+        <h3>Dog Chew Toy for Large Dogs</h3>
+        <p class="price">₱190.00</p>
+        <div class="rating">★★★★☆</div>
+        <button class="addCart">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="CombineProduct" data-category="t-a" data-id="32">
+    <div class="ProductD" data-category="t-a">
+      <div class="Product-img-container">
+        <img src="images/Mockup/d32.png" alt="Dog Toy Grinding Molar Teething Bone" width="248" height="175">
+      </div>
+      <div class="Product-info">
+        <h3>Dog Toy Grinding Molar Teething Bone</h3>
+        <p class="price">₱65.00</p>
+        <div class="rating">★★★★☆</div>
+        <button class="addCart">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="CombineProduct" data-category="t-a" data-id="33">
+    <div class="ProductD" data-category="t-a">
+      <div class="Product-img-container">
+        <img src="images/Mockup/d33.png" alt="Dog Squeaky Training Toys" width="248" height="175">
+      </div>
+      <div class="Product-info">
+        <h3>Dog Squeaky Training Toys</h3>
+        <p class="price">₱100.00</p>
+        <div class="rating">★★★★☆</div>
+        <button class="addCart">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+
+<div class="CombineProduct" data-category="t-a" data-id="34">
+    <div class="ProductD" data-category="t-a">
+      <div class="Product-img-container">
+        <img src="images/Mockup/d34.png" alt="Dog Treat Toy Ball" width="248" height="175">
+      </div>
+      <div class="Product-info">
+        <h3>Dog Treat Toy Ball</h3>
+        <p class="price">₱120.00</p>
+        <div class="rating">★★★★☆</div>
+        <button class="addCart">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="CombineProduct" data-category="t-a" data-id="35">
+    <div class="ProductD" data-category="t-a">
+      <div class="Product-img-container">
+        <img src="images/Mockup/d35.png" alt="Dog Toy Interactive Training Frisbee" width="248" height="175">
+      </div>
+      <div class="Product-info">
+        <h3>Dog Toy Interactive Training Frisbee</h3>
+        <p class="price">₱150.00</p>
+        <div class="rating">★★★★☆</div>
+        <button class="addCart">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="CombineProduct" data-category="t-a" data-id="36">
+    <div class="ProductD" data-category="t-a">
+      <div class="Product-img-container">
+        <img src="images/Mockup/d36.png" alt="Dog Puzzle Toys Interactive Slow Feeder Food Dispenser" width="248" height="175">
+      </div>
+      <div class="Product-info">
+        <h3>Dog Puzzle Toys Interactive Slow Feeder Food Dispenser</h3>
+        <p class="price">₱220.00</p>
+        <div class="rating">★★★★☆</div>
+        <button class="addCart">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="CombineProduct" data-category="t-a" data-id="37">
+    <div class="ProductD" data-category="t-a">
+      <div class="Product-img-container">
+        <img src="images/Mockup/d37.png" alt="Bite Resistant Squeaky Toys for Small Dog Puppy Pet Training Accessories" width="248" height="175">
+      </div>
+      <div class="Product-info">
+        <h3>Bite Resistant Squeaky Toys for Small Dog Puppy Pet Training Accessories</h3>
+        <p class="price">₱180.00</p>
+        <div class="rating">★★★★☆</div>
+        <button class="addCart">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="CombineProduct" data-category="t-a" data-id="38">
+    <div class="ProductD" data-category="t-a">
+      <div class="Product-img-container">
+        <img src="images/Mockup/d38.png" alt="Interactive Automatic Bouncing Ball for Dogs" width="248" height="175">
+      </div>
+      <div class="Product-info">
+        <h3>Interactive Automatic Bouncing Ball for Dogs</h3>
+        <p class="price">₱350.00</p>
+        <div class="rating">★★★★☆</div>
+        <button class="addCart">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="CombineProduct" data-category="t-a" data-id="39">
+    <div class="ProductD" data-category="t-a">
+      <div class="Product-img-container">
+        <img src="images/Mockup/d39.png" alt="Dog Chew Toys Puppy Teething Toys Pet Toys" width="248" height="175">
+      </div>
+      <div class="Product-info">
+        <h3>Dog Chew Toys Puppy Teething Toys Pet Toys</h3>
+        <p class="price">₱130.00</p>
+        <div class="rating">★★★★☆</div>
+        <button class="addCart">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="CombineProduct" data-category="t-a" data-id="40">
+    <div class="ProductD" data-category="t-a">
+      <div class="Product-img-container">
+        <img src="images/Mockup/d40.png" alt="Dog Molar Toothbrush Stick Toys For Small Large Dogs" width="248" height="175">
+      </div>
+      <div class="Product-info">
+        <h3>Dog Molar Toothbrush Stick Toys For Small Large Dogs</h3>
+        <p class="price">₱140.00</p>
+        <div class="rating">★★★★☆</div>
+        <button class="addCart">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+
+  <!--41 to 50-->
+
+  <div class="CombineProduct" data-category="t-a" data-id="34">
+    <div class="ProductD" data-category="t-a">
+      <div class="Product-img-container">
+        <img src="images/Mockup/d34.png" alt="Dog Treat Toy Ball" width="248" height="175">
+      </div>
+      <div class="Product-info">
+        <h3>Dog Treat Toy Ball</h3>
+        <p class="price">₱120.00</p>
+        <div class="rating">★★★★☆</div>
+        <button class="addCart">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+ <div class="CombineProduct" data-category="v-s" data-id="41">
+    <div class="ProductD" data-category="v-s">
+      <div class="Product-img-container">
+        <img src="images/Mockup/d41.png" alt="Popoo Omega-3 Wild Fish Oil Softgel for Dogs" width="248" height="175">
+      </div>
+      <div class="Product-info">
+        <h3>Popoo Omega-3 Wild Fish Oil Softgel for Dogs</h3>
+        <p class="price">₱500.00</p>
+        <div class="rating">★★★★☆</div>
+        <button class="addCart">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product 42 -->
+  <div class="CombineProduct" data-category="v-s" data-id="42">
+    <div class="ProductD" data-category="v-s">
+      <div class="Product-img-container">
+        <img src="images/Mockup/d42.png" alt="Popoo Probiotic Bites Dogs" width="248" height="175">
+      </div>
+      <div class="Product-info">
+        <h3>Popoo Probiotic Bites Dogs</h3>
+        <p class="price">₱550.00</p>
+        <div class="rating">★★★★☆</div>
+        <button class="addCart">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product 43 -->
+  <div class="CombineProduct" data-category="v-s" data-id="43">
+    <div class="ProductD" data-category="v-s">
+      <div class="Product-img-container">
+        <img src="images/Mockup/d43.png" alt="Buddy Multivitamin Supplements 11 in 1 Vitality Support for Dogs" width="248" height="175">
+      </div>
+      <div class="Product-info">
+        <h3>Buddy Multivitamin Supplements 11 in 1 Vitality Support for Dogs</h3>
+        <p class="price">₱150.00</p>
+        <div class="rating">★★★★☆</div>
+        <button class="addCart">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product 44 -->
+  <div class="CombineProduct" data-category="v-s" data-id="44">
+    <div class="ProductD" data-category="v-s">
+      <div class="Product-img-container">
+        <img src="images/Mockup/d44.png" alt="Aller-Immune Flavor Infusions™ for Dog" width="248" height="175">
+      </div>
+      <div class="Product-info">
+        <h3>Aller-Immune Flavor Infusions™ for Dog</h3>
+        <p class="price">₱1500.00</p>
+        <div class="rating">★★★★☆</div>
+        <button class="addCart">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product 45 -->
+  <div class="CombineProduct" data-category="v-s" data-id="45">
+    <div class="ProductD" data-category="v-s">
+      <div class="Product-img-container">
+        <img src="images/Mockup/d45.png" alt="CANINE SCIENCE Hip & Joint Meal Topper for Dogs" width="248" height="175">
+      </div>
+      <div class="Product-info">
+        <h3>CANINE SCIENCE Hip & Joint Meal Topper for Dogs</h3>
+        <p class="price">₱500.00</p>
+        <div class="rating">★★★★☆</div>
+        <button class="addCart">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product 46 -->
+  <div class="CombineProduct" data-category="v-s" data-id="46">
+    <div class="ProductD" data-category="v-s">
+      <div class="Product-img-container">
+        <img src="images/Mockup/d46.png" alt="CANINE SCIENCE Probiotics Meal Topper for Dogs" width="248" height="175">
+      </div>
+      <div class="Product-info">
+        <h3>CANINE SCIENCE Probiotics Meal Topper for Dogs</h3>
+        <p class="price">₱500.00</p>
+        <div class="rating">★★★★☆</div>
+        <button class="addCart">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product 47 -->
+  <div class="CombineProduct" data-category="v-s" data-id="47">
+    <div class="ProductD" data-category="v-s">
+      <div class="Product-img-container">
+        <img src="images/Mockup/d47.png" alt="Floof Pets 8 in 1 Dog Multivitamin" width="248" height="175">
+      </div>
+      <div class="Product-info">
+        <h3>Floof Pets 8 in 1 Dog Multivitamin</h3>
+        <p class="price">₱900.00</p>
+        <div class="rating">★★★★☆</div>
+        <button class="addCart">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product 48 -->
+  <div class="CombineProduct" data-category="v-s" data-id="48">
+    <div class="ProductD" data-category="v-s">
+      <div class="Product-img-container">
+        <img src="images/Mockup/d48.png" alt="Popoo Calming Bites for Dogs" width="248" height="175">
+      </div>
+      <div class="Product-info">
+        <h3>Popoo Calming Bites for Dogs</h3>
+        <p class="price">₱550.00</p>
+        <div class="rating">★★★★☆</div>
+        <button class="addCart">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product 49 -->
+  <div class="CombineProduct" data-category="v-s" data-id="49">
+    <div class="ProductD" data-category="v-s">
+      <div class="Product-img-container">
+        <img src="images/Mockup/d49.png" alt="Native Pet Dog Vitamins & Supplements" width="248" height="175">
+      </div>
+      <div class="Product-info">
+        <h3>Native Pet Dog Vitamins & Supplements</h3>
+        <p class="price">₱1700.00</p>
+        <div class="rating">★★★★☆</div>
+        <button class="addCart">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product 50 -->
+  <div class="CombineProduct" data-category="v-s" data-id="50">
+    <div class="ProductD" data-category="v-s">
+      <div class="Product-img-container">
+        <img src="images/Mockup/d50.png" alt="ProSense Vitamin Solutions" width="248" height="175">
+      </div>
+      <div class="Product-info">
+        <h3>ProSense Vitamin Solutions</h3>
+        <p class="price">₱500.00</p>
+        <div class="rating">★★★★☆</div>
+        <button class="addCart">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+  <div class="CombineProduct" data-category="t-a" data-id="35">
+    <div class="ProductD" data-category="t-a">
+      <div class="Product-img-container">
+        <img src="images/Mockup/d35.png" alt="Dog Toy Interactive Training Frisbee" width="248" height="175">
+      </div>
+      <div class="Product-info">
+        <h3>Dog Toy Interactive Training Frisbee</h3>
+        <p class="price">₱150.00</p>
+        <div class="rating">★★★★☆</div>
+        <button class="addCart">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="CombineProduct" data-category="t-a" data-id="36">
+    <div class="ProductD" data-category="t-a">
+      <div class="Product-img-container">
+        <img src="images/Mockup/d36.png" alt="Dog Puzzle Toys Interactive Slow Feeder Food Dispenser" width="248" height="175">
+      </div>
+      <div class="Product-info">
+        <h3>Dog Puzzle Toys Interactive Slow Feeder Food Dispenser</h3>
+        <p class="price">₱220.00</p>
+        <div class="rating">★★★★☆</div>
+        <button class="addCart">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="CombineProduct" data-category="t-a" data-id="37">
+    <div class="ProductD" data-category="t-a">
+      <div class="Product-img-container">
+        <img src="images/Mockup/d37.png" alt="Bite Resistant Squeaky Toys for Small Dog Puppy Pet Training Accessories" width="248" height="175">
+      </div>
+      <div class="Product-info">
+        <h3>Bite Resistant Squeaky Toys for Small Dog Puppy Pet Training Accessories</h3>
+        <p class="price">₱180.00</p>
+        <div class="rating">★★★★☆</div>
+        <button class="addCart">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="CombineProduct" data-category="t-a" data-id="38">
+    <div class="ProductD" data-category="t-a">
+      <div class="Product-img-container">
+        <img src="images/Mockup/d38.png" alt="Interactive Automatic Bouncing Ball for Dogs" width="248" height="175">
+      </div>
+      <div class="Product-info">
+        <h3>Interactive Automatic Bouncing Ball for Dogs</h3>
+        <p class="price">₱350.00</p>
+        <div class="rating">★★★★☆</div>
+        <button class="addCart">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="CombineProduct" data-category="t-a" data-id="39">
+    <div class="ProductD" data-category="t-a">
+      <div class="Product-img-container">
+        <img src="images/Mockup/d39.png" alt="Dog Chew Toys Puppy Teething Toys Pet Toys" width="248" height="175">
+      </div>
+      <div class="Product-info">
+        <h3>Dog Chew Toys Puppy Teething Toys Pet Toys</h3>
+        <p class="price">₱130.00</p>
+        <div class="rating">★★★★☆</div>
+        <button class="addCart">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="CombineProduct" data-category="t-a" data-id="40">
+    <div class="ProductD" data-category="t-a">
+      <div class="Product-img-container">
+        <img src="images/Mockup/d40.png" alt="Dog Molar Toothbrush Stick Toys For Small Large Dogs" width="248" height="175">
+      </div>
+      <div class="Product-info">
+        <h3>Dog Molar Toothbrush Stick Toys For Small Large Dogs</h3>
+        <p class="price">₱140.00</p>
+        <div class="rating">★★★★☆</div>
+        <button class="addCart">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+    
+    </div>
+    
+</div>
+
+        </main>
+
+
+
+    </main>
+
+    <!-- Footer -->
+<footer class = "footer">
+    <div class = "lineF"></div>
+<!-- Links to other pages -->
+<div class = "footerCon">
+    <div class = "footerL">
+        <div class = "LinksC">
+            <h3>Shops</h3>
+        <ul>
+             <li><a href = "dog-shop.html">Dog</a></li>
+             <li><a href = "cat-shop.html">Cat</a></li>
+             <li><a href = "Essentials.html">Home Essentials</a></li>
+             <li><a href = "all-products.html">All Products</a></li>
+        </ul>
+        </div>
+
+        <div class = "LinksC">
+            <h3>About</h3>
+        <ul>
+             <li><a href = "aboutUs.html">About Us</a></li>
+             <li><a href = "terms.html">Terms & Condition</a></li>
+             <li><a href = "privacy.html">Privacy Policy</a></li>
+             <li><a href = "faq.html">FAQs</a></li>
+             <li><a href = "contacts.html">Contact Us</a></li>
+        </ul>
+        </div>
+    </div>
+
+<!-- News Form -->
+
+    <div class = "Nletter">
+        <form class = "newsletterF">
+            <input type = "Email" placeholder = "Enter your email to get the latest news..." required>
+            <button type = "submit" class = "signup-btn">Sign Up</button>
+        </form>
+
+    </div>
+
+    
+</div>
+<div class = "lineF"></div>
+<div class = "bottomCon">
+<div class = "footerB">
+    <p>Paws&Claws © 2025. All rights reserved</p>
+</div>
+
+<div class="social-icons">
+    <a href="https://www.google.com/url?sa=i&url=https%3A%2F%2Ficons8.com%2Ficons%2Fset%2Ffacebook--white&psig=AOvVaw2n77kFBQq3RQYE16vkU3ck&ust=1747181665819000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCODtmaiVn40DFQAAAAAdAAAAABAE"><img src = "images/fbbilog.png"></a>
+    <a href="https://x.com/pawsnclaws2025?s=21&fbclid=IwY2xjawKPIqdleHRuA2FlbQIxMABicmlkETEySWNIMW1iajQ1M3hCcDBlAR6qXoZBpd6C_jvitX5eN1ALL2lUoAU39BJOcyFiImmrOTpJG-5GflheLeZVDQ_aem_DRc0ad6v7lUbWm9QCsdodw"><img src = "images/twitbilog.png"></a>
+    <a href="https://www.instagram.com/official_pawsandclaws/profilecard/?igsh=MWxzYWRndDV0NDQ1OA%3D%3D&fbclid=IwY2xjawKPIfFleHRuA2FlbQIxMABicmlkETEySWNIMW1iajQ1M3hCcDBlAR65x-ho7gtXeXJJqUfJRUL_-FPI2MAFoA741JXsMrRFoqSkyDsoYSaoAi01DA_aem__fhwmR42rKG7GB6GBdHzJQ"><img src = "images/instabilog.png"></a>
+  </div>
+
+</div>
+
+</footer>
+
+<script>
+    function getURLParameter(name) {
+  const urlParams = new URLSearchParams(window.location.search);
+  return urlParams.get(name);
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  const checkboxes = document.querySelectorAll('.checkbox-filters input');
+  const products = document.querySelectorAll('.Product-Aisle > div'); // ProductD / ProductC / etc.
+
+  function filterProducts() {
+    const selectedCategories = Array.from(checkboxes)
+      .filter(cb => cb.checked)
+      .map(cb => cb.value);
+
+    products.forEach(product => {
+      const category = product.dataset.category;
+      const show = selectedCategories.includes('all') || selectedCategories.includes(category);
+      product.style.display = show ? 'block' : 'none';
+    });
+  }
+
+  // Pre-check filter from URL param
+  const initialFilter = getURLParameter('filter');
+  if (initialFilter) {
+    checkboxes.forEach(cb => {
+      cb.checked = cb.value === initialFilter;
+    });
+    filterProducts();
+  }
+
+  // Hook up normal filter behavior
+  checkboxes.forEach(cb => {
+    cb.addEventListener('change', () => {
+      if (cb.value === 'all' && cb.checked) {
+        checkboxes.forEach(other => {
+          if (other.value !== 'all') other.checked = false;
+        });
+      } else if (cb.checked) {
+        const all = document.querySelector('input[value="all"]');
+        if (all) all.checked = false;
+      }
+      filterProducts();
+    });
+  });
+});
+</script>
+<script>
+document.querySelectorAll('.CombineProduct').forEach(card => {
+  card.addEventListener('click', (e) => {
+    // Prevent if the actual clicked element is the button (or inside it)
+    if (e.target.closest('.addCart')) return;
+    
+    const id = card.dataset.id;
+    window.location.href = `Products.html?id=${id}`;
+  });
+});
+</script>
+</body>
+
+
+</html>
+
+
+<style> 
+
+    .DogShop {
+        justify-items: center;
+        margin-top: 50px;
+    }
+
+
+
+
+    
+
+
+
+
+
+</style>

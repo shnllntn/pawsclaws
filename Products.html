@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="general.css">
+    <title>Product View - Paws&Claws Pet Store</title>
+
+<script src="java/input.js" defer></script>
+<script src="java/accounts.js" defer></script>
+
+</head>
+<body>
+    <header>
+        <div class="LogoL">
+            <a href = "index.html"><img src = "images/paws&claws.jpg" width="80" alt="Paws and Claws Logo">
+            </a>
+        </div>
+<div class = "navi">
+        <nav class = "Major">
+            <ul>
+                <li><a href="all-products.html">All Products</a></li>
+                <li class="Drop">
+                    <a href="dog-shop.html">Dogs</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="dog-shop.html?filter=all">All Products</a></li>
+                        <li><a href="dog-shop.html?filter=t-a">Toys & Accessories</a></li>
+                        <li><a href="dog-shop.html?filter=f-t">Dog Food & Treats</a></li>
+                        <li><a href="dog-shop.html?filter=v-s">Vitamins & Supplements</a></li>
+                    </ul>
+                </li>
+                <li class="Drop Drop-cat">
+                    <a href="cat-shop.html">Cats</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="cat-shop.html?filter=all">All Products</a></li>
+                        <li><a href="cat-shop.html?filter=t-a">Toys & Accessories</a></li>
+                        <li><a href="cat-shop.html?filter=f-t">Cat Food & Treats</a></li>
+                        <li><a href="cat-shop.html?filter=v-s">Vitamins & Supplements</a></li>
+                    </ul>
+                </li>
+                <li><a href="Essentials.html">Home Essentials</a></li>
+
+                <li><a href="About.html">About</a></li>
+            </ul>
+        </nav>
+
+        <nav class = "Minor">
+            <ul>
+
+              <li class = "search-item">
+                <div class="search-container">
+                <!-- Magnifier button toggles the search box -->
+                <button id="search-toggle" class="search-toggle">
+                <img src="images/search.png" width="25" alt="Search">
+                </button>
+                <!-- Hidden search input and results; shown when container has class "open" -->
+                <div class="search-box">
+                <input id="search-input" type="text" placeholder="Search products…" autocomplete="off">
+                <div id="search-results" class="search-results"></div>
+                </div>
+              </div>
+              </li>
+                <li><a href="Cart.html" class = "hover"><img src = "images/cart.png" width="25"></a></li>
+                <li><a href="Wish.html" class = "hover"><img src = "images/heart-3510.png" width="25"></a></li>
+                <li id="auth-nav-item"><a href="login.html" class = "hover"><img src = "images/login.png" width="25"></a></li>
+            </ul>
+        </nav>
+
+    </div>
+
+
+
+    </header>
+<a href="#" class="back" onclick="history.back(); return false;">← Back</a>
+ <!-- PRODUCT DETAIL GRID -->
+<!-- PRODUCT DETAIL GRID -->
+<main class="product-page">
+  <!-- Left: big image -->
+  <div class="product-image">
+    <img id="prod-img" src="" alt="">
+  </div>
+
+  <!-- Right: details & controls -->
+  <div class="product-info">
+    <div class="separate">
+      <p class="category">
+        Category: <strong id="prod-cat"></strong>
+      </p>
+      <h1 class="name" id="prod-name"></h1>
+      <p class="price" id="prod-price"></p>
+
+      <div class="quantity-picker">
+        <button id="decrease">–</button>
+        <input type="text" id="quantity" value="1" readonly>
+        <button id="increase">+</button>
+      </div>
+
+      <div class="actions">
+        <button id="addCartBtn" class="btn-cart">Add to Cart →</button>
+        <button id="addWishBtn" class="btn-wish">♡</button>
+      </div>
+    </div>
+
+    <!-- Tabs -->
+    <div class="separate">
+      <div class="tabs">
+        <button data-tab="desc" class="tab active">Product Description</button>
+        <button data-tab="rev" class="tab">Reviews</button>
+      </div>
+
+      <div id="desc" class="tab-content active">
+        <p id="prod-desc"></p>
+      </div>
+      <div id="rev" class="tab-content">
+      </div>
+    </div>
+  </div>
+</main>
+
+  <!-- YOU MAY ALSO LIKE -->
+  <section class="also-like">
+    <h2>You May Also Like:</h2>
+    <div class="carousel">
+      <!-- Mock similar products -->
+<div class="card">
+  <img class="prod-img" src="images/Mockup/d1.png" alt="Product 1">
+  <h3>PEDIGREE wet dog food for adult</h3><p>₱400.00</p>
+  <button onclick="addToCart(400)">Add to Cart</button>
+</div>
+<div class="card">
+  <img class="prod-img" src="images/Mockup/n1.png" alt="Product 2">
+  <h3>Pet Pee Pads for Dogs</h3><p>₱399.00</p>
+  <button onclick="addToCart(500)">Add to Cart</button>
+</div>
+<div class="card">
+  <img class="prod-img" src="images/Mockup/c1.png" alt="Product 3">
+  <h3>Goodest Cat Tender Tuna</h3><p>₱78.00</p>
+  <button onclick="addToCart(600)">Add to Cart</button>
+</div>
+
+  </section>
+
+<!-- Footer -->
+<footer class = "footer">
+    <div class = "lineF"></div>
+<!-- Links to other pages -->
+<div class = "footerCon">
+    <div class = "footerL">
+        <div class = "LinksC">
+            <h3>Shops</h3>
+        <ul>
+             <li><a href = "dog-shop.html">Dog</a></li>
+             <li><a href = "cat-shop.html">Cat</a></li>
+             <li><a href = "Essentials.html">Home Essentials</a></li>
+             <li><a href = "all-products.html">All Products</a></li>
+        </ul>
+        </div>
+
+        <div class = "LinksC">
+            <h3>About</h3>
+        <ul>
+             <li><a href = "aboutUs.html">About Us</a></li>
+             <li><a href = "terms.html">Terms & Condition</a></li>
+             <li><a href = "privacy.html">Privacy Policy</a></li>
+             <li><a href = "faq.html">FAQs</a></li>
+             <li><a href = "contacts.html">Contact Us</a></li>
+        </ul>
+        </div>
+    </div>
+
+<!-- News Form -->
+
+    <div class = "Nletter">
+        <form class = "newsletterF">
+            <input type = "Email" placeholder = "Enter your email to get the latest news..." required>
+            <button type = "submit" class = "signup-btn">Sign Up</button>
+ 
+        </form>
+
+    </div>
+
+    
+</div>
+<div class = "lineF"></div>
+<div class = "bottomCon">
+<div class = "footerB">
+    <p>Paws&Claws © 2025. All rights reserved</p>
+</div>
+
+<div class="social-icons">
+    <a href="https://www.google.com/url?sa=i&url=https%3A%2F%2Ficons8.com%2Ficons%2Fset%2Ffacebook--white&psig=AOvVaw2n77kFBQq3RQYE16vkU3ck&ust=1747181665819000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCODtmaiVn40DFQAAAAAdAAAAABAE"><img src = "images/fbbilog.png"></a>
+    <a href="https://x.com/pawsnclaws2025?s=21&fbclid=IwY2xjawKPIqdleHRuA2FlbQIxMABicmlkETEySWNIMW1iajQ1M3hCcDBlAR6qXoZBpd6C_jvitX5eN1ALL2lUoAU39BJOcyFiImmrOTpJG-5GflheLeZVDQ_aem_DRc0ad6v7lUbWm9QCsdodw"><img src = "images/twitbilog.png"></a>
+    <a href="https://www.instagram.com/official_pawsandclaws/profilecard/?igsh=MWxzYWRndDV0NDQ1OA%3D%3D&fbclid=IwY2xjawKPIfFleHRuA2FlbQIxMABicmlkETEySWNIMW1iajQ1M3hCcDBlAR65x-ho7gtXeXJJqUfJRUL_-FPI2MAFoA741JXsMrRFoqSkyDsoYSaoAi01DA_aem__fhwmR42rKG7GB6GBdHzJQ"><img src = "images/instabilog.png"></a>
+  </div>
+
+</div>
+
+</footer>
+ <!-- CART LOGIC -->
+<script src="java/products.js"></script>
+ <script>
+  
+document.addEventListener("DOMContentLoaded", function () {
+
+    // 2) Grab the `?id=` from URL:
+    const params = new URLSearchParams(location.search);
+    const id = parseInt(params.get('id'), 10);
+    const prod = Products.find(p => p.id === id);
+
+    if (!prod) {
+      document.querySelector('.product-page').innerHTML = "<h2>Product not found</h2>";
+    } else {
+      // 3) Populate the template
+      document.getElementById('prod-img').src = prod.image;
+      document.getElementById('prod-img').alt = prod.name;
+      document.getElementById('prod-name').textContent = prod.name;
+      document.getElementById('prod-price').textContent = `₱${prod.price}.00`;
+      document.getElementById('prod-cat').textContent = prod.category;
+      const descEl = document.getElementById('prod-desc');
+if (Array.isArray(prod.description)) {
+  // clear any placeholder
+  descEl.innerHTML = '';
+  // render each paragraph
+  prod.description.forEach(text => {
+    const p = document.createElement('p');
+    p.textContent = text;
+    descEl.appendChild(p);
+  });
+} else {
+  descEl.textContent = prod.description;
+}
+
+const revEl = document.getElementById('rev');
+revEl.innerHTML = ''; // Clear existing content
+
+if (Array.isArray(prod.reviews) && prod.reviews.length > 0) {
+  prod.reviews.forEach(review => {
+    if (review?.user && review?.rating) { // Check required fields
+      const reviewHTML = `
+        <div class="review">
+          <p><strong>${review.user}</strong> — <em>${review.date}</em></p>
+          <p>${'★'.repeat(review.rating)}${'☆'.repeat(5 - review.rating)}</p>
+          <p>${review.comment}</p>
+        </div>
+      `;
+      revEl.innerHTML += reviewHTML;
+    }
+  });
+  
+  // Fallback if no valid reviews were rendered
+  if (revEl.children.length === 0) {
+    revEl.innerHTML = '<p>No valid reviews found.</p>';
+  }
+} else {
+  revEl.innerHTML = '<p>No reviews yet. Be the first to review!</p>';
+}
+    }
+
+    // 4) Cart & quantity logic
+   let cart = loadCart();
+
+const qtyInput = document.getElementById('quantity');
+document.getElementById('increase').onclick = () => qtyInput.value++;
+document.getElementById('decrease').onclick = () => {
+  if (qtyInput.value > 1) qtyInput.value--;
+};
+
+document.getElementById('addCartBtn').onclick = () => {
+  // 2) Guard for login
+  if (!sessionStorage.getItem('pawsclaws_current_user')) {
+    return window.location.href = 'login.html?next=Cart.html';
+  }
+
+  // 3) Add/update the item
+  const q = +qtyInput.value;
+  const existing = cart.find(i => i.id === id);
+  if (existing) existing.quantity += q;
+  else cart.push({ ...prod, quantity: q });
+
+  // 4) Save back under the user’s key
+  saveCart(cart);
+
+  alert(`${prod.name} ×${q} added to cart`);
+};
+    const wishBtn = document.getElementById('addWishBtn');
+let wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+
+// 1) On page load: toggle heart if already wishlisted
+const inWish = wishlist.some(item => item.id === prod.id);
+if (inWish) {
+  wishBtn.textContent = '♥';
+  wishBtn.classList.add('active');
+} else {
+  wishBtn.textContent = '♡';
+}
+
+// 2) On click: add/remove from localStorage + update icon
+wishBtn.addEventListener('click', () => {
+  wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+  const idx = wishlist.findIndex(item => item.id === prod.id);
+
+  if (idx === -1) {
+    // Add it
+    wishlist.push({
+      id:    prod.id,
+      name:  prod.name,
+      price: prod.price,
+      image: prod.image,
+      description: prod.description
+    });
+    localStorage.setItem('wishlist', JSON.stringify(wishlist));
+    wishBtn.textContent = '♥';
+    wishBtn.classList.add('active');
+    alert(`Added "${prod.name}" to wishlist.`);
+  } else {
+    // Remove it
+    wishlist.splice(idx, 1);
+    localStorage.setItem('wishlist', JSON.stringify(wishlist));
+    wishBtn.textContent = '♡';
+    wishBtn.classList.remove('active');
+    alert(`Removed "${prod.name}" from wishlist.`);
+  }
+  });
+
+    // 5) Tabs
+    document.querySelectorAll('.tab').forEach(btn => {
+      btn.onclick = () => {
+        document.querySelectorAll('.tab, .tab-content').forEach(el => el.classList.remove('active'));
+        btn.classList.add('active');
+        document.getElementById(btn.dataset.tab).classList.add('active');
+      };
+    });
+
+    function getCartKey() {
+  const user = JSON.parse(sessionStorage.getItem('pawsclaws_current_user'));
+  return user
+    ? `cart_${user.id}`
+    : 'cart_guest';
+}
+
+function loadCart() {
+  return JSON.parse(localStorage.getItem(getCartKey()) || '[]');
+}
+
+function saveCart(cart) {
+  localStorage.setItem(getCartKey(), JSON.stringify(cart));
+}
+
+  });
+  </script>
+<script src="java/search.js"></script>
+</body>
+
+<style>
+
+/* --- Basic Reset & Fonts --- */
+* { box-sizing: border-box; margin:0; padding:0; }
+body { font-family: Arial, sans-serif; background: #F9EED8; color:#000000; }
+
+/* --- Header --- */
+.site-header {
+  display: flex; align-items:center; justify-content:space-between;
+  background:#F7A072; color:white; padding:10px 20px;
+}
+.site-header .logo { font-size:1.5em; font-weight:bold; }
+.site-header nav ul { list-style:none; display:flex; gap:15px; }
+.site-header nav a { color:white; text-decoration:none; position:relative; }
+.site-header .dropdown:hover .dropdown-menu { display:block; }
+
+
+/* --- Product Page Layout --- */
+.product-page {
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap:40px;
+  max-width:1200px;
+  margin:40px auto;
+}
+
+.back {
+  margin-left: 20px;
+  margin-top: 20px;
+  text-decoration: none;
+  color: rgb(119, 79, 60);
+  font-size: 20px;
+  font-weight: 100;
+}
+
+header {
+  margin-bottom: 20px;
+}
+
+
+
+.product-image img { width:100%; border-radius:8px;}
+.product-image { margin-right: 150px;}
+.product-info { display:flex; flex-direction:column; gap:15px; padding: 20px; gap: 40px;}
+.category, .price { font-size:1.1em; margin-bottom: 15px;}
+.name { font-size:2em; }
+.separate { background-color: #eee8dc; padding: 10px 13px 40px 13px;}
+
+.quantity-picker {
+  display:flex; align-items:center; gap:10px; margin-bottom: 15px;
+}
+.quantity-picker button {
+  width:32px; height:32px; border:none; background:#000000; color:white;
+  font-size:1.2em; cursor:pointer; border-radius:4px;
+}
+.quantity-picker input {
+  width:40px; text-align:center; font-size:1em;
+}
+
+.actions {
+  display:flex; gap:10px;
+}
+.btn-cart, .btn-wish {
+  border:none; padding:12px 20px; font-size:1em; cursor:pointer; border-radius:4px;
+}
+.btn-cart { background:black; color:white; flex:1; }
+.btn-wish { background:white; color:black; border:1px solid #2A3F7A; }
+.btn-wish.active { color: crimson; }
+
+/* --- Tabs --- */
+.tabs { display:flex; gap:20px; margin-top:20px;}
+.tab {
+  padding:8px 16px; border:none; background:transparent; cursor:pointer;
+  border-bottom:2px solid transparent; font-weight:bold; font-size: 21px;
+}
+.tab.active { border-color:#2A3F7A; color:#2A3F7A; }
+.tab-content { display:none; margin-top:20px; }
+.tab-content.active { display:block; }
+
+/* --- You May Also Like --- */
+.also-like { padding:20px; margin:40px 30px 0 260px; max-width:620px; }
+.also-like h2 { margin-bottom:20px; }
+.carousel { display:flex; gap:20px; overflow-x:auto; }
+.card {
+  background:#ffffff; padding:10px; text-align:center; border-radius:8px;
+  min-width:180px;
+}
+.card img {width: 20%; border-radius:4px; padding: 0%;}
+.card h3 { font-size:1em; margin:10px 0; }
+.card p { margin-bottom:10px; }
+.card button { background:#000000; color:white; border:none; padding:8px; cursor:pointer; border-radius:4px; }
+
+/* --- Footer --- */
+.site-footer { background:#000000; color:white; text-align:center; padding:10px; margin-top:40px; }
+
+</style>
+</html>

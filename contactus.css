@@ -1,0 +1,114 @@
+.contact-wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 100px 20px;
+        background-color: #F9EED8;
+
+}
+
+.contact-form {
+    background-color: #fae9c6;
+    padding: 40px;
+    width: 100%;
+    max-width: 600px;
+    border-radius: 6px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h2 {
+    margin-bottom: 10px;
+    font-size: 28px;
+    color: #333;
+}
+
+.contact-form p {
+    margin-bottom: 30px;
+    color: #444;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.name-fields {
+    display: flex;
+    gap: 20px;
+}
+
+.name-fields .form-group {
+    flex: 1;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    border-radius: 4px;
+    background-color: #fff;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.checkbox-group {
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.checkbox-group label {
+    font-weight: normal;
+    margin-bottom: 0;
+    font-size: 13px;
+}
+
+.checkbox-group a {
+    color: #2a3f7a;
+    text-decoration: underline;
+}
+
+.submit-btn {
+    padding: 10px 20px;
+    background-color: #000;
+    color: white;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+
+.submit-btn:hover {
+    background-color: #333;
+}
+
+.error-message {
+    color: #dc3545;
+    font-size: 0.8rem;
+    margin-top: 5px;
+}
+
+.success-message {
+    text-align: center;
+    padding: 20px;
+    background-color: #dff0d8;
+    color: #2a3f7a;
+    border-radius: 4px;
+    margin-top: 20px;
+}
+
